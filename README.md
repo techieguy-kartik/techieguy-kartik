@@ -151,12 +151,8 @@ Mechanism:
 ## 📝 FEATURED RESEARCH & AUTOMATED BLOG POSTS
 
 <!-- BLOG-POST-LIST:START -->
-| Publication / Article | Description | Direct Link |
-| :--- | :--- | :---: |
-| **Transformer Architecture Deep Dive** | Comprehensive breakdown of self-attention mechanisms, FlashAttention, and LLM scaling laws. | [Read Article](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa) |
-| **DisCoCat QNLP Compiler** | Compiling natural language grammar structures directly into NISQ quantum circuits using Lambeq. | [Repository](https://github.com/techieguy-kartik) |
-| **Orbital Federated Satellite AI** | Simulated federated continual learning on low Earth orbit constellations via delta-weights. | [Repository](https://github.com/techieguy-kartik) |
-| **3DGS Real-Time Robotic SLAM** | 3D Gaussian Splatting representation for real-time localization in Nav2-stack robotics. | [Repository](https://github.com/techieguy-kartik) |
+- [Transformer Architecture deep dive](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa?source=rss-bbd8e5185bec------2)
+- [AWS VPC &lpar;Virtual Private Cloud&rpar;](https://medium.com/@arorakartik1589/aws-vpc-virtual-private-cloud-32872f0f58d8?source=rss-bbd8e5185bec------2)
 <!-- BLOG-POST-LIST:END -->
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
