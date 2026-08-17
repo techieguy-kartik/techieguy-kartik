@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%">
+  <defs>
+    <linearGradient id="hudBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <filter id="hudGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .bg { fill: #0B0E14; rx: 12px; stroke: url(#hudBorder); stroke-width: 2; }
+    .text-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 16px; letter-spacing: 2px; }
+    .text-val { font-family: 'Segoe UI', sans-serif; fill: #E2E8F0; font-size: 13px; }
+    .text-dim { fill: #94A3B8; font-size: 11px; }
+    .tag { fill: #1E293B; stroke: #00D4FF; stroke-width: 1; rx: 4px; }
+    .tag-text { font-family: monospace; fill: #00F5D4; font-size: 11px; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" />
+
+  <path d="M 15 35 L 15 15 L 35 15" stroke="#00D4FF" stroke-width="2" fill="none" />
+  <path d="M 985 35 L 985 15 L 965 15" stroke="#00D4FF" stroke-width="2" fill="none" />
+  <path d="M 15 245 L 15 265 L 35 265" stroke="#00D4FF" stroke-width="2" fill="none" />
+  <path d="M 985 245 L 985 265 L 965 265" stroke="#00D4FF" stroke-width="2" fill="none" />
+
+  <text x="35" y="45" class="text-title">SYSTEM_HUD // KARTIK ARORA [SAMSUNG R&amp;D]</text>
+  <text x="965" y="45" class="text-title" text-anchor="end">STATUS: ACTIVE // ORBITAL DEPLOYED</text>
+  <line x1="35" y1="58" x2="965" y2="58" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="40" y="90" fill="#7B2CBF" font-family="monospace" font-weight="bold" font-size="13">SYSTEM DOMAINS</text>
+  
+  <rect x="40" y="105" width="280" height="34" class="tag"/>
+  <text x="50" y="126" class="tag-text">🛰️ LEO Satellite Federated AI</text>
+  
+  <rect x="40" y="148" width="280" height="34" class="tag"/>
+  <text x="50" y="169" class="tag-text">🤖 Swarm MARL &amp; Drone Mesh</text>
+  
+  <rect x="40" y="191" width="280" height="34" class="tag"/>
+  <text x="50" y="212" class="tag-text">⚛️ DisCoCat QNLP to NISQ Circuits</text>
+
+  <text x="360" y="90" fill="#00D4FF" font-family="monospace" font-weight="bold" font-size="13">HARDWARE &amp; KERNEL STACK</text>
+
+  <text x="360" y="118" class="text-val">⚡ CUDA &amp; Triton Kernel Optimization</text>
+  <text x="360" y="136" class="text-dim">Flash Attention • Custom Memory Hierarchy Tuning</text>
+
+  <text x="360" y="165" class="text-val">👁️ 3D Gaussian Splatting (3DGS)</text>
+  <text x="360" y="183" class="text-dim">Real-time Robotic Localisation &amp; Nav2 Stack</text>
+
+  <text x="360" y="212" class="text-val">💻 Quantum Simulators &amp; Frameworks</text>
+  <text x="360" y="230" class="text-dim">Qiskit • PennyLane • Lambeq Grammar Mapping</text>
+
+  <text x="700" y="90" fill="#00F5D4" font-family="monospace" font-weight="bold" font-size="13">RESEARCH TELEMETRY</text>
+
+  <text x="700" y="118" class="text-val">Organization: <tspan fill="#00D4FF">Samsung R&amp;D India</tspan></text>
+  <text x="700" y="145" class="text-val">Human-in-the-Loop: <tspan fill="#FF007F">0% (Autonomous)</tspan></text>
+  <text x="700" y="172" class="text-val">Orchestration: <tspan fill="#00F5D4">Multi-Agent Swarm</tspan></text>
+
+  <rect x="700" y="195" width="250" height="12" fill="#1E293B" rx="6"/>
+  <rect x="700" y="195" width="220" height="12" fill="url(#hudBorder)" rx="6" filter="url(#hudGlow)"/>
+  <text x="700" y="225" class="text-dim">Autonomous Convergence: 94.8%</text>
+
+  <line x1="20" y1="20" x2="980" y2="20" stroke="#00D4FF" stroke-width="1" opacity="0.3">
+    <animate attributeName="y1" values="20;260;20" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="20;260;20" dur="6s" repeatCount="indefinite"/>
+  </line>
+</svg>

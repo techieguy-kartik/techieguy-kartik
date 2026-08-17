@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" width="100%" preserveAspectRatio="none">
+<defs>
+  <linearGradient id="cyanFlow" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#00D4FF"/>
+    <stop offset="25%" stop-color="#7B2CBF"/>
+    <stop offset="50%" stop-color="#00F5D4"/>
+    <stop offset="75%" stop-color="#FF007F"/>
+    <stop offset="100%" stop-color="#00D4FF"/>
+  </linearGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+<style>
+  @keyframes particle { 0% { transform: translateX(-50px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(1250px); opacity: 0; } }
+  @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+</style>
+<line x1="0" y1="15.0" x2="1200" y2="15.0" stroke="url(#cyanFlow)" stroke-width="1.8" filter="url(#glow)" style="animation: pulse 3s ease-in-out infinite;"/>
+<circle cx="0" cy="15.0" r="1.5" fill="#00D4FF" filter="url(#glow)" style="animation: particle 4.0s linear infinite 0.00s;"/>
+<circle cx="0" cy="17.7" r="1.5" fill="#00F5D4" filter="url(#glow)" style="animation: particle 4.5s linear infinite 0.35s;"/>
+<circle cx="0" cy="18.4" r="1.5" fill="#7B2CBF" filter="url(#glow)" style="animation: particle 5.0s linear infinite 0.70s;"/>
+<circle cx="0" cy="16.5" r="1.5" fill="#FF007F" filter="url(#glow)" style="animation: particle 5.5s linear infinite 1.05s;"/>
+<circle cx="0" cy="13.5" r="1.5" fill="#00D4FF" filter="url(#glow)" style="animation: particle 4.0s linear infinite 1.40s;"/>
+<circle cx="0" cy="11.6" r="1.5" fill="#00F5D4" filter="url(#glow)" style="animation: particle 4.5s linear infinite 1.75s;"/>
+<circle cx="0" cy="12.3" r="1.5" fill="#7B2CBF" filter="url(#glow)" style="animation: particle 5.0s linear infinite 2.10s;"/>
+<circle cx="0" cy="15.1" r="1.5" fill="#FF007F" filter="url(#glow)" style="animation: particle 5.5s linear infinite 2.45s;"/>
+<circle cx="0" cy="17.8" r="1.5" fill="#00D4FF" filter="url(#glow)" style="animation: particle 4.0s linear infinite 2.80s;"/>
+<circle cx="0" cy="18.4" r="1.5" fill="#00F5D4" filter="url(#glow)" style="animation: particle 4.5s linear infinite 3.15s;"/>
+<circle cx="0" cy="16.4" r="1.5" fill="#7B2CBF" filter="url(#glow)" style="animation: particle 5.0s linear infinite 3.50s;"/>
+<circle cx="0" cy="13.4" r="1.5" fill="#FF007F" filter="url(#glow)" style="animation: particle 5.5s linear infinite 3.85s;"/>
+<circle cx="0" cy="11.6" r="1.5" fill="#00D4FF" filter="url(#glow)" style="animation: particle 4.0s linear infinite 4.20s;"/>
+<circle cx="0" cy="12.3" r="1.5" fill="#00F5D4" filter="url(#glow)" style="animation: particle 4.5s linear infinite 4.55s;"/>
+<circle cx="0" cy="15.1" r="1.5" fill="#7B2CBF" filter="url(#glow)" style="animation: particle 5.0s linear infinite 4.90s;"/>
+<circle cx="0" cy="17.8" r="1.5" fill="#FF007F" filter="url(#glow)" style="animation: particle 5.5s linear infinite 5.25s;"/>
+<circle cx="0" cy="18.4" r="1.5" fill="#00D4FF" filter="url(#glow)" style="animation: particle 4.0s linear infinite 5.60s;"/>
+<circle cx="0" cy="16.4" r="1.5" fill="#00F5D4" filter="url(#glow)" style="animation: particle 4.5s linear infinite 5.95s;"/>
+<circle cx="0" cy="13.3" r="1.5" fill="#7B2CBF" filter="url(#glow)" style="animation: particle 5.0s linear infinite 6.30s;"/>
+<circle cx="0" cy="11.6" r="1.5" fill="#FF007F" filter="url(#glow)" style="animation: particle 5.5s linear infinite 6.65s;"/>
+<circle cx="0" cy="12.4" r="1.5" fill="#00D4FF" filter="url(#glow)" style="animation: particle 4.0s linear infinite 7.00s;"/>
+<circle cx="0" cy="15.2" r="1.5" fill="#00F5D4" filter="url(#glow)" style="animation: particle 4.5s linear infinite 7.35s;"/>
+<circle cx="0" cy="17.8" r="1.5" fill="#7B2CBF" filter="url(#glow)" style="animation: particle 5.0s linear infinite 7.70s;"/>
+<circle cx="0" cy="18.4" r="1.5" fill="#FF007F" filter="url(#glow)" style="animation: particle 5.5s linear infinite 8.05s;"/>
+</svg>

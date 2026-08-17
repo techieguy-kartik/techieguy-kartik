@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" width="100%">
+  <defs>
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <filter id="meshGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#0B0E14" rx="8" stroke="#1E293B"/>
+  
+  <g stroke="url(#meshGrad)" stroke-width="1.2" opacity="0.4">
+    <line x1="80" y1="80" x2="220" y2="40"/>
+    <line x1="80" y1="80" x2="220" y2="120"/>
+    <line x1="220" y1="40" x2="450" y2="80"/>
+    <line x1="220" y1="120" x2="450" y2="80"/>
+    <line x1="450" y1="80" x2="680" y2="40"/>
+    <line x1="450" y1="80" x2="680" y2="120"/>
+    <line x1="680" y1="40" x2="820" y2="80"/>
+    <line x1="680" y1="120" x2="820" y2="80"/>
+  </g>
+
+  <g filter="url(#meshGlow)">
+    <circle cx="80" cy="80" r="7" fill="#00D4FF"/>
+    <circle cx="220" cy="40" r="6" fill="#00F5D4"/>
+    <circle cx="220" cy="120" r="6" fill="#7B2CBF"/>
+    <circle cx="450" cy="80" r="9" fill="#FF007F"/>
+    <circle cx="680" cy="40" r="6" fill="#7B2CBF"/>
+    <circle cx="680" cy="120" r="6" fill="#00F5D4"/>
+    <circle cx="820" cy="80" r="7" fill="#00D4FF"/>
+  </g>
+
+  <g font-family="monospace" font-size="11" fill="#E2E8F0" text-anchor="middle">
+    <text x="80" y="110" fill="#00D4FF">Orbital Node</text>
+    <text x="220" y="25" fill="#00F5D4">Quadrotor A</text>
+    <text x="220" y="145" fill="#7B2CBF">UGV Alpha</text>
+    <text x="450" y="110" fill="#FF007F" font-weight="bold">Central Swarm CTDE</text>
+    <text x="680" y="25" fill="#7B2CBF">DisCoCat Circuit</text>
+    <text x="680" y="145" fill="#00F5D4">Triton Kernel</text>
+    <text x="820" y="110" fill="#00D4FF">Edge Sync</text>
+  </g>
+</svg>
