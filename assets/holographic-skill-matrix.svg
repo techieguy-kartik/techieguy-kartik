@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%">
+  <defs>
+    <linearGradient id="neonBar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <linearGradient id="neonBar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#FF007F"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131B2E" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0B0E14" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="skillGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .matrix-bg { fill: #0B0E14; rx: 12px; stroke: #1E293B; stroke-width: 1.5; }
+    .matrix-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 14px; letter-spacing: 2px; }
+    .card { fill: url(#cardGrad); rx: 8px; stroke: #1E293B; stroke-width: 1.2; }
+    .quad-title { font-family: 'Segoe UI', sans-serif; font-weight: 700; font-size: 13px; }
+    .skill-name { font-family: monospace; font-size: 11px; fill: #E2E8F0; }
+    .bar-bg { fill: #1E293B; rx: 4px; }
+    .bar-fill { rx: 4px; }
+    .status-pill { font-family: monospace; font-size: 9px; font-weight: bold; fill: #00F5D4; }
+  </style>
+
+  <rect width="100%" height="100%" class="matrix-bg"/>
+
+  <text x="30" y="35" class="matrix-title">CORE_CAPABILITY_MATRIX // ACCELERATION &amp; AUTONOMOUS SYSTEMS</text>
+  <text x="970" y="35" font-family="monospace" fill="#00F5D4" font-size="12" text-anchor="end">SAMSUNG R&amp;D BENCHMARK</text>
+  <line x1="30" y1="48" x2="970" y2="48" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ================= QUADRANT 1: HARDWARE & KERNELS ================= -->
+  <g transform="translate(30, 65)">
+    <rect width="455" height="130" class="card" stroke="#76B900"/>
+    <text x="20" y="28" class="quad-title" fill="#76B900">⚡ GPU Kernels &amp; Hardware Acceleration</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#76B900"/>
+    <text x="397" y="27" class="status-pill" fill="#76B900" text-anchor="middle">OPTIMIZED</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">CUDA C++ / Triton Kernel Authoring</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="395" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">FlashAttention &amp; GPU Memory Hierarchy</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="380" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+
+  <!-- ================= QUADRANT 2: AUTONOMOUS & SWARM ================= -->
+  <g transform="translate(515, 65)">
+    <rect width="455" height="130" class="card" stroke="#00D4FF"/>
+    <text x="20" y="28" class="quad-title" fill="#00D4FF">🤖 Autonomous AI &amp; Swarm Intelligence</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#00D4FF"/>
+    <text x="397" y="27" class="status-pill" fill="#00D4FF" text-anchor="middle">ACTIVE R&amp;D</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">Multi-Agent RL (CTDE Attention Swarms)</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="390" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">3D Gaussian Splatting (3DGS) &amp; Nav2 SLAM</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="370" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+
+  <!-- ================= QUADRANT 3: SPACE-GRADE EDGE AI ================= -->
+  <g transform="translate(30, 210)">
+    <rect width="455" height="130" class="card" stroke="#00F5D4"/>
+    <text x="20" y="28" class="quad-title" fill="#00F5D4">🛰️ Space-Grade Orbital &amp; Federated AI</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#00F5D4"/>
+    <text x="397" y="27" class="status-pill" fill="#00F5D4" text-anchor="middle">DEPLOYED</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">LEO Satellite Continual Federated Learning</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="385" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">Delta-Weight Sync &amp; Low-Power Inference</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="360" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+
+  <!-- ================= QUADRANT 4: QUANTUM COMPUTING ================= -->
+  <g transform="translate(515, 210)">
+    <rect width="455" height="130" class="card" stroke="#FF007F"/>
+    <text x="20" y="28" class="quad-title" fill="#FF007F">⚛️ Quantum NLP &amp; DisCoCat NISQ Compilers</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#FF007F"/>
+    <text x="397" y="27" class="status-pill" fill="#FF007F" text-anchor="middle">RESEARCH</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">DisCoCat Grammar-to-Circuit Compilation</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="375" height="8" fill="url(#neonBar2)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">Qiskit, PennyLane &amp; Variational Quantum Circuits</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="365" height="8" fill="url(#neonBar2)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+</svg>

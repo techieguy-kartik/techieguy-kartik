@@ -18,19 +18,16 @@
   <text x="30" y="35" font-family="'Courier New', monospace" font-weight="bold" fill="#7B2CBF" font-size="14" letter-spacing="2">3D_QUANTUM_DISCOCAT_COMPILER // GRAMMAR TO NISQ GATES</text>
   <text x="970" y="35" font-family="monospace" fill="#00D4FF" font-size="12" text-anchor="end">[QISKIT &amp; PENNYLANE ACCELERATED]</text>
 
-  <!-- 3D Perspective Circuit Wires -->
   <g stroke="url(#qGrad)" stroke-width="2" opacity="0.8">
     <line x1="80" y1="80" x2="920" y2="80"/>
     <line x1="80" y1="130" x2="920" y2="130"/>
     <line x1="80" y1="180" x2="920" y2="180"/>
   </g>
 
-  <!-- Qubit Labels -->
   <text x="40" y="84" font-family="monospace" fill="#00D4FF" font-size="13" font-weight="bold">|q0⟩</text>
   <text x="40" y="134" font-family="monospace" fill="#7B2CBF" font-size="13" font-weight="bold">|q1⟩</text>
   <text x="40" y="184" font-family="monospace" fill="#00F5D4" font-size="13" font-weight="bold">|q2⟩</text>
 
-  <!-- Hadamard Gates -->
   <g transform="translate(180, 0)" filter="url(#qGlow)">
     <rect x="0" y="65" width="30" height="30" fill="#1E293B" stroke="#00D4FF" stroke-width="1.5" rx="4"/>
     <text x="15" y="85" font-family="sans-serif" fill="#00D4FF" font-size="14" font-weight="bold" text-anchor="middle">H</text>
@@ -39,7 +36,6 @@
     <text x="15" y="135" font-family="sans-serif" fill="#7B2CBF" font-size="14" font-weight="bold" text-anchor="middle">H</text>
   </g>
 
-  <!-- CNOT Entanglement Gate -->
   <g transform="translate(360, 0)" filter="url(#qGlow)">
     <line x1="15" y1="80" x2="15" y2="180" stroke="#00F5D4" stroke-width="2"/>
     <circle cx="15" cy="80" r="5" fill="#00F5D4"/>
@@ -48,7 +44,6 @@
     <line x1="8" y1="180" x2="22" y2="180" stroke="#00F5D4" stroke-width="2"/>
   </g>
 
-  <!-- Parameterized Rotation Gates Rz(θ) -->
   <g transform="translate(540, 0)" filter="url(#qGlow)">
     <rect x="0" y="65" width="60" height="30" fill="#1E293B" stroke="#FF007F" stroke-width="1.5" rx="4"/>
     <text x="30" y="84" font-family="sans-serif" fill="#FF007F" font-size="11" font-weight="bold" text-anchor="middle">Rz(θ1)</text>
@@ -60,7 +55,6 @@
     <text x="30" y="184" font-family="sans-serif" fill="#00F5D4" font-size="11" font-weight="bold" text-anchor="middle">Rz(θ3)</text>
   </g>
 
-  <!-- Measurement Meters -->
   <g transform="translate(760, 0)">
     <rect x="0" y="65" width="30" height="30" fill="#0D1117" stroke="#94A3B8" stroke-width="1.5" rx="4"/>
     <path d="M 8 85 A 10 10 0 0 1 22 85" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="100%">
+  <defs>
+    <linearGradient id="radarSweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="blochGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B2CBF"/>
+      <stop offset="50%" stop-color="#FF007F"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <filter id="radarGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .radar-bg { fill: #0B0E14; rx: 12px; stroke: #1E293B; stroke-width: 1.5; }
+    .hud-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 14px; letter-spacing: 2px; }
+    .hud-sub { font-family: monospace; font-size: 11px; fill: #94A3B8; }
+    .dial-title { font-family: 'Segoe UI', monospace; font-weight: 700; font-size: 13px; fill: #E2E8F0; }
+    
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pingNode {
+      0%, 100% { r: 4; opacity: 0.3; }
+      50% { r: 7; opacity: 1; }
+    }
+    @keyframes vectorPrecession {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(45deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="radar-bg"/>
+
+  <text x="30" y="35" class="hud-title">REAL-TIME TELEMETRY // ORBITAL RADAR &amp; QUANTUM STATE VECTOR</text>
+  <text x="970" y="35" font-family="monospace" fill="#00F5D4" font-size="12" text-anchor="end">STATUS: CONTINUOUS RECURSIVE SYNC</text>
+  <line x1="30" y1="48" x2="970" y2="48" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ================= LEFT PANEL: ORBITAL SWARM RADAR ================= -->
+  <g transform="translate(250, 170)">
+    <!-- Radar Rings -->
+    <circle cx="0" cy="0" r="95" fill="#0D1117" stroke="#1E293B" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="3,3"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.4"/>
+
+    <!-- Crosshairs -->
+    <line x1="-95" y1="0" x2="95" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <line x1="0" y1="-95" x2="0" y2="95" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Rotating Radar Sweep -->
+    <g style="transform-origin: 0px 0px; animation: radarSpin 4s linear infinite;">
+      <path d="M 0 0 L 95 0 A 95 95 0 0 1 0 95 Z" fill="url(#radarSweep)" opacity="0.4"/>
+      <line x1="0" y1="0" x2="95" y2="0" stroke="#00D4FF" stroke-width="1.5" filter="url(#radarGlow)"/>
+    </g>
+
+    <!-- Radar Target Nodes -->
+    <circle cx="45" cy="-35" r="4" fill="#00F5D4" filter="url(#radarGlow)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="54" y="-32" font-family="monospace" font-size="9" fill="#00F5D4">LEO-Sat 01</text>
+
+    <circle cx="-50" cy="40" r="4" fill="#FF007F" filter="url(#radarGlow)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="-90" y="55" font-family="monospace" font-size="9" fill="#FF007F">Drone-Swarm α</text>
+
+    <circle cx="20" cy="60" r="4" fill="#00D4FF" filter="url(#radarGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Central Base -->
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" filter="url(#radarGlow)"/>
+  </g>
+
+  <!-- Left Panel Labels -->
+  <text x="140" y="75" class="dial-title">🛰️ Autonomous Swarm Radar</text>
+  <text x="140" y="280" class="hud-sub">Track: 12 Quadrotors + 4 Satellites</text>
+
+  <!-- Divider Line Between Panels -->
+  <line x1="500" y1="65" x2="500" y2="280" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ================= RIGHT PANEL: 3D QUANTUM BLOCH SPHERE ================= -->
+  <g transform="translate(750, 170)">
+    <!-- 3D Sphere Wireframe -->
+    <circle cx="0" cy="0" r="90" fill="#0D1117" stroke="#7B2CBF" stroke-width="1.5" opacity="0.6"/>
+    <!-- Equator Ellipse -->
+    <ellipse cx="0" cy="0" rx="90" ry="30" fill="none" stroke="#FF007F" stroke-width="1.2" opacity="0.5" stroke-dasharray="4,3"/>
+    <!-- Meridian Ellipse -->
+    <ellipse cx="0" cy="0" rx="30" ry="90" fill="none" stroke="#00F5D4" stroke-width="1.2" opacity="0.5" stroke-dasharray="4,3"/>
+
+    <!-- Axes -->
+    <line x1="0" y1="-98" x2="0" y2="98" stroke="#94A3B8" stroke-width="1.2"/>
+    <line x1="-98" y1="0" x2="98" y2="0" stroke="#94A3B8" stroke-width="1.2" opacity="0.5"/>
+
+    <!-- Poles -->
+    <text x="0" y="-104" font-family="monospace" font-size="11" font-weight="bold" fill="#00D4FF" text-anchor="middle">|0⟩ (Ground)</text>
+    <text x="0" y="112" font-family="monospace" font-size="11" font-weight="bold" fill="#7B2CBF" text-anchor="middle">|1⟩ (Excited)</text>
+
+    <!-- State Vector |ψ⟩ Precessing -->
+    <g style="transform-origin: 0px 0px; animation: vectorPrecession 5s ease-in-out infinite;">
+      <line x1="0" y1="0" x2="55" y2="-60" stroke="#00F5D4" stroke-width="2.5" filter="url(#radarGlow)"/>
+      <polygon points="55,-60 44,-54 48,-46" fill="#00F5D4" filter="url(#radarGlow)"/>
+      <circle cx="55" cy="-60" r="4" fill="#FFFFFF" filter="url(#radarGlow)"/>
+    </g>
+    <text x="70" y="-62" font-family="monospace" font-size="11" font-weight="bold" fill="#00F5D4">|ψ⟩ State</text>
+  </g>
+
+  <!-- Right Panel Labels -->
+  <text x="640" y="75" class="dial-title">⚛️ Qubit Bloch Sphere State</text>
+  <text x="640" y="280" class="hud-sub">State: |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩</text>
+</svg>

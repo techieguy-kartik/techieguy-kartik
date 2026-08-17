@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" width="100%" preserveAspectRatio="none">
+<defs>
+  <linearGradient id="cyberWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#00D4FF"/>
+    <stop offset="25%" stop-color="#7B2CBF"/>
+    <stop offset="50%" stop-color="#00F5D4"/>
+    <stop offset="75%" stop-color="#FF007F"/>
+    <stop offset="100%" stop-color="#00D4FF"/>
+  </linearGradient>
+  <filter id="waveGlow">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+<style>
+  @keyframes wavePulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.95; } }
+  @keyframes flowParticle { 0% { transform: translateX(-40px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(1240px); opacity: 0; } }
+</style>
+<path d="M 0 20.0 Q 300 8.0 600 20.0 T 1200 20.0" fill="none" stroke="url(#cyberWaveGrad)" stroke-width="2" filter="url(#waveGlow)" style="animation: wavePulse 3s ease-in-out infinite;"/>
+<circle cx="0" cy="20.0" r="1.6" fill="#00D4FF" filter="url(#waveGlow)" style="animation: flowParticle 3.8s linear infinite 0.00s;"/>
+<circle cx="0" cy="24.3" r="1.6" fill="#00F5D4" filter="url(#waveGlow)" style="animation: flowParticle 4.4s linear infinite 0.40s;"/>
+<circle cx="0" cy="26.0" r="1.6" fill="#7B2CBF" filter="url(#waveGlow)" style="animation: flowParticle 5.0s linear infinite 0.80s;"/>
+<circle cx="0" cy="24.1" r="1.6" fill="#FF007F" filter="url(#waveGlow)" style="animation: flowParticle 5.6s linear infinite 1.20s;"/>
+<circle cx="0" cy="19.6" r="1.6" fill="#76B900" filter="url(#waveGlow)" style="animation: flowParticle 3.8s linear infinite 1.60s;"/>
+<circle cx="0" cy="15.5" r="1.6" fill="#00D4FF" filter="url(#waveGlow)" style="animation: flowParticle 4.4s linear infinite 2.00s;"/>
+<circle cx="0" cy="14.0" r="1.6" fill="#00F5D4" filter="url(#waveGlow)" style="animation: flowParticle 5.0s linear infinite 2.40s;"/>
+<circle cx="0" cy="16.2" r="1.6" fill="#7B2CBF" filter="url(#waveGlow)" style="animation: flowParticle 5.6s linear infinite 2.80s;"/>
+<circle cx="0" cy="20.7" r="1.6" fill="#FF007F" filter="url(#waveGlow)" style="animation: flowParticle 3.8s linear infinite 3.20s;"/>
+<circle cx="0" cy="24.8" r="1.6" fill="#76B900" filter="url(#waveGlow)" style="animation: flowParticle 4.4s linear infinite 3.60s;"/>
+<circle cx="0" cy="25.9" r="1.6" fill="#00D4FF" filter="url(#waveGlow)" style="animation: flowParticle 5.0s linear infinite 4.00s;"/>
+<circle cx="0" cy="23.5" r="1.6" fill="#00F5D4" filter="url(#waveGlow)" style="animation: flowParticle 5.6s linear infinite 4.40s;"/>
+<circle cx="0" cy="19.0" r="1.6" fill="#7B2CBF" filter="url(#waveGlow)" style="animation: flowParticle 3.8s linear infinite 4.80s;"/>
+<circle cx="0" cy="15.0" r="1.6" fill="#FF007F" filter="url(#waveGlow)" style="animation: flowParticle 4.4s linear infinite 5.20s;"/>
+<circle cx="0" cy="14.1" r="1.6" fill="#76B900" filter="url(#waveGlow)" style="animation: flowParticle 5.0s linear infinite 5.60s;"/>
+<circle cx="0" cy="16.8" r="1.6" fill="#00D4FF" filter="url(#waveGlow)" style="animation: flowParticle 5.6s linear infinite 6.00s;"/>
+<circle cx="0" cy="21.4" r="1.6" fill="#00F5D4" filter="url(#waveGlow)" style="animation: flowParticle 3.8s linear infinite 6.40s;"/>
+<circle cx="0" cy="25.2" r="1.6" fill="#7B2CBF" filter="url(#waveGlow)" style="animation: flowParticle 4.4s linear infinite 6.80s;"/>
+<circle cx="0" cy="25.8" r="1.6" fill="#FF007F" filter="url(#waveGlow)" style="animation: flowParticle 5.0s linear infinite 7.20s;"/>
+<circle cx="0" cy="22.9" r="1.6" fill="#76B900" filter="url(#waveGlow)" style="animation: flowParticle 5.6s linear infinite 7.60s;"/>
+</svg>

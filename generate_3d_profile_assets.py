@@ -4,7 +4,452 @@ import math
 output_dir = os.path.join(os.path.dirname(__file__), "assets")
 os.makedirs(output_dir, exist_ok=True)
 
-# 1. Generate 3d-orbital-constellation.svg
+# 1. Generate 3d-isometric-system-stack.svg
+def generate_isometric_stack():
+    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%">
+  <defs>
+    <linearGradient id="slabGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7B2CBF" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="slabGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5D4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00599C" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="slabGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007F" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7B2CBF" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="slabGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#76B900" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .bg-canvas { fill: #0B0E14; rx: 12px; stroke: #1E293B; stroke-width: 1.5; }
+    .header-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 15px; letter-spacing: 2px; }
+    .header-status { font-family: monospace; fill: #00F5D4; font-size: 12px; }
+    .tier-title { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 13px; }
+    .tier-desc { font-family: monospace; font-size: 11px; fill: #94A3B8; }
+    .laser-bus { stroke-dasharray: 4,4; animation: laserFlow 2s linear infinite; }
+    @keyframes laserFlow { 0% { stroke-dashoffset: 16; } 100% { stroke-dashoffset: 0; } }
+    @keyframes particleDrop { 0% { cy: 110; opacity: 0; } 50% { opacity: 1; } 100% { cy: 410; opacity: 0; } }
+  </style>
+
+  <rect width="100%" height="100%" class="bg-canvas" />
+
+  <!-- Header -->
+  <text x="30" y="38" class="header-title">3D_ISOMETRIC_SYSTEM_ARCHITECTURE // FULL-STACK TELEMETRY</text>
+  <text x="970" y="38" class="header-status" text-anchor="end">[4-TIER RECURSIVE ARCHITECTURE]</text>
+  <line x1="30" y1="52" x2="970" y2="52" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Vertical Laser Interconnect Buses -->
+  <line x1="500" y1="100" x2="500" y2="430" stroke="#00D4FF" stroke-width="1.5" class="laser-bus" opacity="0.6"/>
+  <line x1="320" y1="140" x2="320" y2="430" stroke="#7B2CBF" stroke-width="1.2" class="laser-bus" opacity="0.4"/>
+  <line x1="680" y1="140" x2="680" y2="430" stroke="#00F5D4" stroke-width="1.2" class="laser-bus" opacity="0.4"/>
+
+  <!-- Floating Data Particles -->
+  <circle cx="500" cy="110" r="2.5" fill="#00F5D4" filter="url(#neonGlow)">
+    <animate attributeName="cy" values="100;420" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="320" cy="140" r="2" fill="#7B2CBF" filter="url(#neonGlow)">
+    <animate attributeName="cy" values="140;430" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="680" cy="140" r="2" fill="#00D4FF" filter="url(#neonGlow)">
+    <animate attributeName="cy" values="140;430" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ================= TIER 4: ORBITAL EDGE & SATELLITE SWARM (Top) ================= -->
+  <g transform="translate(500, 105)">
+    <!-- Isometric Polygon Slab -->
+    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad1)" stroke="#00D4FF" stroke-width="1.8" filter="url(#neonGlow)"/>
+    <polygon points="-260,20 0,68 0,80 -260,32" fill="#00D4FF" fill-opacity="0.2" stroke="#00D4FF" stroke-width="1"/>
+    <polygon points="260,20 0,68 0,80 260,32" fill="#7B2CBF" fill-opacity="0.2" stroke="#7B2CBF" stroke-width="1"/>
+
+    <!-- Tier Icon & Nodes -->
+    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#00D4FF" stroke-width="1.5"/>
+    <text x="0" y="24" font-size="12" text-anchor="middle">🛰️</text>
+
+    <!-- Content Labels (Right & Left) -->
+    <text x="290" y="22" class="tier-title" fill="#00D4FF">TIER 4: Space-Grade Orbital AI</text>
+    <text x="290" y="38" class="tier-desc">LEO Constellations • Federated Continual Learning</text>
+    <text x="290" y="52" class="tier-desc">Zero-Latency Delta Sync • Space-Hardened Inference</text>
+
+    <text x="-290" y="22" class="tier-title" fill="#00D4FF" text-anchor="end">Distributed Telemetry</text>
+    <text x="-290" y="38" class="tier-desc" text-anchor="end">Inter-Satellite Laser Mesh</text>
+  </g>
+
+  <!-- ================= TIER 3: SWARM MARL & EMBODIED ROBOTICS ================= -->
+  <g transform="translate(500, 205)">
+    <!-- Isometric Polygon Slab -->
+    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad2)" stroke="#00F5D4" stroke-width="1.8" filter="url(#neonGlow)"/>
+    <polygon points="-260,20 0,68 0,80 -260,32" fill="#00F5D4" fill-opacity="0.2" stroke="#00F5D4" stroke-width="1"/>
+    <polygon points="260,20 0,68 0,80 260,32" fill="#00599C" fill-opacity="0.2" stroke="#00599C" stroke-width="1"/>
+
+    <!-- Tier Icon & Nodes -->
+    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#00F5D4" stroke-width="1.5"/>
+    <text x="0" y="24" font-size="12" text-anchor="middle">🤖</text>
+
+    <!-- Content Labels -->
+    <text x="290" y="22" class="tier-title" fill="#00F5D4">TIER 3: Swarm MARL &amp; 3DGS Spatial Vision</text>
+    <text x="290" y="38" class="tier-desc">Heterogeneous Drones + UGVs • Attention CTDE</text>
+    <text x="290" y="52" class="tier-desc">3D Gaussian Splatting • ROS2 Nav2 Localization</text>
+
+    <text x="-290" y="22" class="tier-title" fill="#00F5D4" text-anchor="end">Decentralized Mesh</text>
+    <text x="-290" y="38" class="tier-desc" text-anchor="end">Dynamic Agent Coordination</text>
+  </g>
+
+  <!-- ================= TIER 2: QUANTUM COMPILER & DISCOCAT ================= -->
+  <g transform="translate(500, 305)">
+    <!-- Isometric Polygon Slab -->
+    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad3)" stroke="#FF007F" stroke-width="1.8" filter="url(#neonGlow)"/>
+    <polygon points="-260,20 0,68 0,80 -260,32" fill="#FF007F" fill-opacity="0.2" stroke="#FF007F" stroke-width="1"/>
+    <polygon points="260,20 0,68 0,80 260,32" fill="#7B2CBF" fill-opacity="0.2" stroke="#7B2CBF" stroke-width="1"/>
+
+    <!-- Tier Icon & Nodes -->
+    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#FF007F" stroke-width="1.5"/>
+    <text x="0" y="24" font-size="12" text-anchor="middle">⚛️</text>
+
+    <!-- Content Labels -->
+    <text x="290" y="22" class="tier-title" fill="#FF007F">TIER 2: DisCoCat Quantum NLP Compiler</text>
+    <text x="290" y="38" class="tier-desc">Grammar-to-Circuit Mapping • NISQ Execution</text>
+    <text x="290" y="52" class="tier-desc">Parameterized Variational Circuits • PennyLane &amp; Qiskit</text>
+
+    <text x="-290" y="22" class="tier-title" fill="#FF007F" text-anchor="end">Compositional AI</text>
+    <text x="-290" y="38" class="tier-desc" text-anchor="end">Entangled State Encoding</text>
+  </g>
+
+  <!-- ================= TIER 1: HARDWARE SILICON & CUDA KERNELS (Base) ================= -->
+  <g transform="translate(500, 405)">
+    <!-- Isometric Polygon Slab -->
+    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad4)" stroke="#76B900" stroke-width="1.8" filter="url(#neonGlow)"/>
+    <polygon points="-260,20 0,68 0,80 -260,32" fill="#76B900" fill-opacity="0.2" stroke="#76B900" stroke-width="1"/>
+    <polygon points="260,20 0,68 0,80 260,32" fill="#00D4FF" fill-opacity="0.2" stroke="#00D4FF" stroke-width="1"/>
+
+    <!-- Tier Icon & Nodes -->
+    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#76B900" stroke-width="1.5"/>
+    <text x="0" y="24" font-size="12" text-anchor="middle">⚡</text>
+
+    <!-- Content Labels -->
+    <text x="290" y="22" class="tier-title" fill="#76B900">TIER 1: CUDA &amp; Triton Kernel Acceleration</text>
+    <text x="290" y="38" class="tier-desc">FlashAttention • Custom Memory Hierarchy Profiling</text>
+    <text x="290" y="52" class="tier-desc">NVIDIA Nsight Tuning • High-Throughput Tensor Cores</text>
+
+    <text x="-290" y="22" class="tier-title" fill="#76B900" text-anchor="end">Silicon Substrate</text>
+    <text x="-290" y="38" class="tier-desc" text-anchor="end">Samsung R&amp;D Base</text>
+  </g>
+</svg>'''
+    filepath = os.path.join(output_dir, "3d-isometric-system-stack.svg")
+    with open(filepath, "w") as f:
+        f.write(svg)
+    print(f"Generated {filepath}")
+
+# 2. Generate quantum-bloch-radar.svg
+def generate_bloch_radar():
+    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="100%">
+  <defs>
+    <linearGradient id="radarSweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="blochGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B2CBF"/>
+      <stop offset="50%" stop-color="#FF007F"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <filter id="radarGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .radar-bg { fill: #0B0E14; rx: 12px; stroke: #1E293B; stroke-width: 1.5; }
+    .hud-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 14px; letter-spacing: 2px; }
+    .hud-sub { font-family: monospace; font-size: 11px; fill: #94A3B8; }
+    .dial-title { font-family: 'Segoe UI', monospace; font-weight: 700; font-size: 13px; fill: #E2E8F0; }
+    
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pingNode {
+      0%, 100% { r: 4; opacity: 0.3; }
+      50% { r: 7; opacity: 1; }
+    }
+    @keyframes vectorPrecession {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(45deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="radar-bg"/>
+
+  <text x="30" y="35" class="hud-title">REAL-TIME TELEMETRY // ORBITAL RADAR &amp; QUANTUM STATE VECTOR</text>
+  <text x="970" y="35" font-family="monospace" fill="#00F5D4" font-size="12" text-anchor="end">STATUS: CONTINUOUS RECURSIVE SYNC</text>
+  <line x1="30" y1="48" x2="970" y2="48" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ================= LEFT PANEL: ORBITAL SWARM RADAR ================= -->
+  <g transform="translate(250, 170)">
+    <!-- Radar Rings -->
+    <circle cx="0" cy="0" r="95" fill="#0D1117" stroke="#1E293B" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="3,3"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.4"/>
+
+    <!-- Crosshairs -->
+    <line x1="-95" y1="0" x2="95" y2="0" stroke="#1E293B" stroke-width="1"/>
+    <line x1="0" y1="-95" x2="0" y2="95" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Rotating Radar Sweep -->
+    <g style="transform-origin: 0px 0px; animation: radarSpin 4s linear infinite;">
+      <path d="M 0 0 L 95 0 A 95 95 0 0 1 0 95 Z" fill="url(#radarSweep)" opacity="0.4"/>
+      <line x1="0" y1="0" x2="95" y2="0" stroke="#00D4FF" stroke-width="1.5" filter="url(#radarGlow)"/>
+    </g>
+
+    <!-- Radar Target Nodes -->
+    <circle cx="45" cy="-35" r="4" fill="#00F5D4" filter="url(#radarGlow)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="54" y="-32" font-family="monospace" font-size="9" fill="#00F5D4">LEO-Sat 01</text>
+
+    <circle cx="-50" cy="40" r="4" fill="#FF007F" filter="url(#radarGlow)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="-90" y="55" font-family="monospace" font-size="9" fill="#FF007F">Drone-Swarm α</text>
+
+    <circle cx="20" cy="60" r="4" fill="#00D4FF" filter="url(#radarGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Central Base -->
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" filter="url(#radarGlow)"/>
+  </g>
+
+  <!-- Left Panel Labels -->
+  <text x="140" y="75" class="dial-title">🛰️ Autonomous Swarm Radar</text>
+  <text x="140" y="280" class="hud-sub">Track: 12 Quadrotors + 4 Satellites</text>
+
+  <!-- Divider Line Between Panels -->
+  <line x1="500" y1="65" x2="500" y2="280" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ================= RIGHT PANEL: 3D QUANTUM BLOCH SPHERE ================= -->
+  <g transform="translate(750, 170)">
+    <!-- 3D Sphere Wireframe -->
+    <circle cx="0" cy="0" r="90" fill="#0D1117" stroke="#7B2CBF" stroke-width="1.5" opacity="0.6"/>
+    <!-- Equator Ellipse -->
+    <ellipse cx="0" cy="0" rx="90" ry="30" fill="none" stroke="#FF007F" stroke-width="1.2" opacity="0.5" stroke-dasharray="4,3"/>
+    <!-- Meridian Ellipse -->
+    <ellipse cx="0" cy="0" rx="30" ry="90" fill="none" stroke="#00F5D4" stroke-width="1.2" opacity="0.5" stroke-dasharray="4,3"/>
+
+    <!-- Axes -->
+    <line x1="0" y1="-98" x2="0" y2="98" stroke="#94A3B8" stroke-width="1.2"/>
+    <line x1="-98" y1="0" x2="98" y2="0" stroke="#94A3B8" stroke-width="1.2" opacity="0.5"/>
+
+    <!-- Poles -->
+    <text x="0" y="-104" font-family="monospace" font-size="11" font-weight="bold" fill="#00D4FF" text-anchor="middle">|0⟩ (Ground)</text>
+    <text x="0" y="112" font-family="monospace" font-size="11" font-weight="bold" fill="#7B2CBF" text-anchor="middle">|1⟩ (Excited)</text>
+
+    <!-- State Vector |ψ⟩ Precessing -->
+    <g style="transform-origin: 0px 0px; animation: vectorPrecession 5s ease-in-out infinite;">
+      <line x1="0" y1="0" x2="55" y2="-60" stroke="#00F5D4" stroke-width="2.5" filter="url(#radarGlow)"/>
+      <polygon points="55,-60 44,-54 48,-46" fill="#00F5D4" filter="url(#radarGlow)"/>
+      <circle cx="55" cy="-60" r="4" fill="#FFFFFF" filter="url(#radarGlow)"/>
+    </g>
+    <text x="70" y="-62" font-family="monospace" font-size="11" font-weight="bold" fill="#00F5D4">|ψ⟩ State</text>
+  </g>
+
+  <!-- Right Panel Labels -->
+  <text x="640" y="75" class="dial-title">⚛️ Qubit Bloch Sphere State</text>
+  <text x="640" y="280" class="hud-sub">State: |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩</text>
+</svg>'''
+    filepath = os.path.join(output_dir, "quantum-bloch-radar.svg")
+    with open(filepath, "w") as f:
+        f.write(svg)
+    print(f"Generated {filepath}")
+
+# 3. Generate holographic-skill-matrix.svg
+def generate_skill_matrix():
+    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%">
+  <defs>
+    <linearGradient id="neonBar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <linearGradient id="neonBar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#FF007F"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131B2E" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0B0E14" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="skillGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .matrix-bg { fill: #0B0E14; rx: 12px; stroke: #1E293B; stroke-width: 1.5; }
+    .matrix-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 14px; letter-spacing: 2px; }
+    .card { fill: url(#cardGrad); rx: 8px; stroke: #1E293B; stroke-width: 1.2; }
+    .quad-title { font-family: 'Segoe UI', sans-serif; font-weight: 700; font-size: 13px; }
+    .skill-name { font-family: monospace; font-size: 11px; fill: #E2E8F0; }
+    .bar-bg { fill: #1E293B; rx: 4px; }
+    .bar-fill { rx: 4px; }
+    .status-pill { font-family: monospace; font-size: 9px; font-weight: bold; fill: #00F5D4; }
+  </style>
+
+  <rect width="100%" height="100%" class="matrix-bg"/>
+
+  <text x="30" y="35" class="matrix-title">CORE_CAPABILITY_MATRIX // ACCELERATION &amp; AUTONOMOUS SYSTEMS</text>
+  <text x="970" y="35" font-family="monospace" fill="#00F5D4" font-size="12" text-anchor="end">SAMSUNG R&amp;D BENCHMARK</text>
+  <line x1="30" y1="48" x2="970" y2="48" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ================= QUADRANT 1: HARDWARE & KERNELS ================= -->
+  <g transform="translate(30, 65)">
+    <rect width="455" height="130" class="card" stroke="#76B900"/>
+    <text x="20" y="28" class="quad-title" fill="#76B900">⚡ GPU Kernels &amp; Hardware Acceleration</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#76B900"/>
+    <text x="397" y="27" class="status-pill" fill="#76B900" text-anchor="middle">OPTIMIZED</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">CUDA C++ / Triton Kernel Authoring</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="395" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">FlashAttention &amp; GPU Memory Hierarchy</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="380" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+
+  <!-- ================= QUADRANT 2: AUTONOMOUS & SWARM ================= -->
+  <g transform="translate(515, 65)">
+    <rect width="455" height="130" class="card" stroke="#00D4FF"/>
+    <text x="20" y="28" class="quad-title" fill="#00D4FF">🤖 Autonomous AI &amp; Swarm Intelligence</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#00D4FF"/>
+    <text x="397" y="27" class="status-pill" fill="#00D4FF" text-anchor="middle">ACTIVE R&amp;D</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">Multi-Agent RL (CTDE Attention Swarms)</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="390" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">3D Gaussian Splatting (3DGS) &amp; Nav2 SLAM</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="370" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+
+  <!-- ================= QUADRANT 3: SPACE-GRADE EDGE AI ================= -->
+  <g transform="translate(30, 210)">
+    <rect width="455" height="130" class="card" stroke="#00F5D4"/>
+    <text x="20" y="28" class="quad-title" fill="#00F5D4">🛰️ Space-Grade Orbital &amp; Federated AI</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#00F5D4"/>
+    <text x="397" y="27" class="status-pill" fill="#00F5D4" text-anchor="middle">DEPLOYED</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">LEO Satellite Continual Federated Learning</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="385" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">Delta-Weight Sync &amp; Low-Power Inference</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="360" height="8" fill="url(#neonBar1)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+
+  <!-- ================= QUADRANT 4: QUANTUM COMPUTING ================= -->
+  <g transform="translate(515, 210)">
+    <rect width="455" height="130" class="card" stroke="#FF007F"/>
+    <text x="20" y="28" class="quad-title" fill="#FF007F">⚛️ Quantum NLP &amp; DisCoCat NISQ Compilers</text>
+    <rect x="360" y="15" width="75" height="18" fill="#1E293B" rx="9" stroke="#FF007F"/>
+    <text x="397" y="27" class="status-pill" fill="#FF007F" text-anchor="middle">RESEARCH</text>
+
+    <!-- Skill 1 -->
+    <text x="20" y="60" class="skill-name">DisCoCat Grammar-to-Circuit Compilation</text>
+    <rect x="20" y="68" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="68" width="375" height="8" fill="url(#neonBar2)" class="bar-fill" filter="url(#skillGlow)"/>
+
+    <!-- Skill 2 -->
+    <text x="20" y="100" class="skill-name">Qiskit, PennyLane &amp; Variational Quantum Circuits</text>
+    <rect x="20" y="108" width="415" height="8" class="bar-bg"/>
+    <rect x="20" y="108" width="365" height="8" fill="url(#neonBar2)" class="bar-fill" filter="url(#skillGlow)"/>
+  </g>
+</svg>'''
+    filepath = os.path.join(output_dir, "holographic-skill-matrix.svg")
+    with open(filepath, "w") as f:
+        f.write(svg)
+    print(f"Generated {filepath}")
+
+# 4. Generate cyber-living-wave.svg
+def generate_cyber_wave():
+    width = 1200
+    height = 40
+    lines = []
+    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" preserveAspectRatio="none">')
+    lines.append('<defs>')
+    lines.append('  <linearGradient id="cyberWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">')
+    lines.append('    <stop offset="0%" stop-color="#00D4FF"/>')
+    lines.append('    <stop offset="25%" stop-color="#7B2CBF"/>')
+    lines.append('    <stop offset="50%" stop-color="#00F5D4"/>')
+    lines.append('    <stop offset="75%" stop-color="#FF007F"/>')
+    lines.append('    <stop offset="100%" stop-color="#00D4FF"/>')
+    lines.append('  </linearGradient>')
+    lines.append('  <filter id="waveGlow">')
+    lines.append('    <feGaussianBlur stdDeviation="2.5" result="blur"/>')
+    lines.append('    <feMerge>')
+    lines.append('      <feMergeNode in="blur"/>')
+    lines.append('      <feMergeNode in="SourceGraphic"/>')
+    lines.append('    </feMerge>')
+    lines.append('  </filter>')
+    lines.append('</defs>')
+    lines.append('<style>')
+    lines.append('  @keyframes wavePulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.95; } }')
+    lines.append('  @keyframes flowParticle { 0% { transform: translateX(-40px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(1240px); opacity: 0; } }')
+    lines.append('</style>')
+
+    # Background wave line
+    mid = height / 2
+    path_d = f"M 0 {mid} Q 300 {mid-12} 600 {mid} T 1200 {mid}"
+    lines.append(f'<path d="{path_d}" fill="none" stroke="url(#cyberWaveGrad)" stroke-width="2" filter="url(#waveGlow)" style="animation: wavePulse 3s ease-in-out infinite;"/>')
+
+    # Floating photon particles
+    colors = ['#00D4FF', '#00F5D4', '#7B2CBF', '#FF007F', '#76B900']
+    for i in range(20):
+        delay = i * 0.4
+        dur = 3.8 + (i % 4) * 0.6
+        y = mid + math.sin(i * 0.8) * 6
+        c = colors[i % len(colors)]
+        lines.append(f'<circle cx="0" cy="{y:.1f}" r="1.6" fill="{c}" filter="url(#waveGlow)" style="animation: flowParticle {dur:.1f}s linear infinite {delay:.2f}s;"/>')
+
+    lines.append('</svg>')
+    filepath = os.path.join(output_dir, "cyber-living-wave.svg")
+    with open(filepath, "w") as f:
+        f.write('\n'.join(lines))
+    print(f"Generated {filepath}")
+
+# Retain existing generators
 def generate_3d_orbital():
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%">
   <defs>
@@ -37,7 +482,6 @@ def generate_3d_orbital():
 
   <rect width="100%" height="100%" class="bg-3d" />
 
-  <!-- 3D Perspective Grid Background -->
   <g opacity="0.15" stroke="#00D4FF" stroke-width="0.8">
     <line x1="0" y1="260" x2="1000" y2="260" />
     <line x1="0" y1="290" x2="1000" y2="290" />
@@ -48,34 +492,25 @@ def generate_3d_orbital():
     <line x1="900" y1="200" x2="1000" y2="320" />
   </g>
 
-  <!-- Title & Status Header -->
   <text x="30" y="35" font-family="'Courier New', monospace" font-weight="bold" fill="#00D4FF" font-size="14" letter-spacing="2">3D_ORBITAL_SWARM_TOPOLOGY // SATELLITE &amp; DRONE MESH</text>
   <text x="970" y="35" font-family="'Courier New', monospace" fill="#00F5D4" font-size="12" text-anchor="end">[LATENCY: 0.4ms] [NODES: 24/24 SYNCED]</text>
 
-  <!-- Central 3D Earth Node -->
   <g transform="translate(500, 160)">
-    <!-- Earth Sphere Glow -->
     <circle cx="0" cy="0" r="45" fill="url(#earthGrad)" filter="url(#glow3d)" opacity="0.9"/>
     <circle cx="0" cy="0" r="45" fill="none" stroke="#00D4FF" stroke-width="1.5" opacity="0.8"/>
     <text x="0" y="5" font-family="monospace" font-weight="bold" fill="#FFFFFF" font-size="11" text-anchor="middle">EARTH NODE</text>
     <text x="0" y="20" font-family="monospace" fill="#00F5D4" font-size="9" text-anchor="middle">Samsung R&amp;D Base</text>
 
-    <!-- 3D Orbit Ring 1 (LEO Satellites - Horizontal Ellipse) -->
     <ellipse cx="0" cy="0" rx="260" ry="70" class="orbit-ring" transform="rotate(-15)"/>
-
-    <!-- 3D Orbit Ring 2 (Drone Swarm - Vertical Ellipse) -->
     <ellipse cx="0" cy="0" rx="360" ry="95" class="orbit-ring" transform="rotate(25)"/>
 
-    <!-- Satellite Nodes on Orbit 1 -->
     <g transform="rotate(-15)">
-      <!-- Sat 1 -->
       <g transform="translate(-220, -35)">
         <circle cx="0" cy="0" r="8" fill="#00D4FF" filter="url(#glow3d)"/>
         <rect x="-16" y="-3" width="8" height="6" fill="#7B2CBF"/>
         <rect x="8" y="-3" width="8" height="6" fill="#7B2CBF"/>
         <text x="0" y="-14" class="node-text" text-anchor="middle">LEO-Sat Alpha</text>
       </g>
-      <!-- Sat 2 -->
       <g transform="translate(210, 40)">
         <circle cx="0" cy="0" r="8" fill="#00F5D4" filter="url(#glow3d)"/>
         <rect x="-16" y="-3" width="8" height="6" fill="#00599C"/>
@@ -84,16 +519,13 @@ def generate_3d_orbital():
       </g>
     </g>
 
-    <!-- Swarm Drone Nodes on Orbit 2 -->
     <g transform="rotate(25)">
-      <!-- Drone Quadrotor 1 -->
       <g transform="translate(-300, 50)">
         <circle cx="0" cy="0" r="7" fill="#FF007F" filter="url(#glow3d)"/>
         <line x1="-12" y1="0" x2="12" y2="0" stroke="#FF007F" stroke-width="1.5"/>
         <line x1="0" y1="-12" x2="0" y2="12" stroke="#FF007F" stroke-width="1.5"/>
         <text x="0" y="20" class="node-text" text-anchor="middle">MARL Swarm Quad-1</text>
       </g>
-      <!-- Drone Quadrotor 2 -->
       <g transform="translate(310, -45)">
         <circle cx="0" cy="0" r="7" fill="#7B2CBF" filter="url(#glow3d)"/>
         <line x1="-12" y1="0" x2="12" y2="0" stroke="#7B2CBF" stroke-width="1.5"/>
@@ -108,7 +540,6 @@ def generate_3d_orbital():
         f.write(svg)
     print(f"Generated {filepath}")
 
-# 2. Generate 3d-quantum-circuit.svg
 def generate_3d_quantum():
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%">
   <defs>
@@ -130,19 +561,16 @@ def generate_3d_quantum():
   <text x="30" y="35" font-family="'Courier New', monospace" font-weight="bold" fill="#7B2CBF" font-size="14" letter-spacing="2">3D_QUANTUM_DISCOCAT_COMPILER // GRAMMAR TO NISQ GATES</text>
   <text x="970" y="35" font-family="monospace" fill="#00D4FF" font-size="12" text-anchor="end">[QISKIT &amp; PENNYLANE ACCELERATED]</text>
 
-  <!-- 3D Perspective Circuit Wires -->
   <g stroke="url(#qGrad)" stroke-width="2" opacity="0.8">
     <line x1="80" y1="80" x2="920" y2="80"/>
     <line x1="80" y1="130" x2="920" y2="130"/>
     <line x1="80" y1="180" x2="920" y2="180"/>
   </g>
 
-  <!-- Qubit Labels -->
   <text x="40" y="84" font-family="monospace" fill="#00D4FF" font-size="13" font-weight="bold">|q0⟩</text>
   <text x="40" y="134" font-family="monospace" fill="#7B2CBF" font-size="13" font-weight="bold">|q1⟩</text>
   <text x="40" y="184" font-family="monospace" fill="#00F5D4" font-size="13" font-weight="bold">|q2⟩</text>
 
-  <!-- Hadamard Gates -->
   <g transform="translate(180, 0)" filter="url(#qGlow)">
     <rect x="0" y="65" width="30" height="30" fill="#1E293B" stroke="#00D4FF" stroke-width="1.5" rx="4"/>
     <text x="15" y="85" font-family="sans-serif" fill="#00D4FF" font-size="14" font-weight="bold" text-anchor="middle">H</text>
@@ -151,7 +579,6 @@ def generate_3d_quantum():
     <text x="15" y="135" font-family="sans-serif" fill="#7B2CBF" font-size="14" font-weight="bold" text-anchor="middle">H</text>
   </g>
 
-  <!-- CNOT Entanglement Gate -->
   <g transform="translate(360, 0)" filter="url(#qGlow)">
     <line x1="15" y1="80" x2="15" y2="180" stroke="#00F5D4" stroke-width="2"/>
     <circle cx="15" cy="80" r="5" fill="#00F5D4"/>
@@ -160,7 +587,6 @@ def generate_3d_quantum():
     <line x1="8" y1="180" x2="22" y2="180" stroke="#00F5D4" stroke-width="2"/>
   </g>
 
-  <!-- Parameterized Rotation Gates Rz(θ) -->
   <g transform="translate(540, 0)" filter="url(#qGlow)">
     <rect x="0" y="65" width="60" height="30" fill="#1E293B" stroke="#FF007F" stroke-width="1.5" rx="4"/>
     <text x="30" y="84" font-family="sans-serif" fill="#FF007F" font-size="11" font-weight="bold" text-anchor="middle">Rz(θ1)</text>
@@ -172,7 +598,6 @@ def generate_3d_quantum():
     <text x="30" y="184" font-family="sans-serif" fill="#00F5D4" font-size="11" font-weight="bold" text-anchor="middle">Rz(θ3)</text>
   </g>
 
-  <!-- Measurement Meters -->
   <g transform="translate(760, 0)">
     <rect x="0" y="65" width="30" height="30" fill="#0D1117" stroke="#94A3B8" stroke-width="1.5" rx="4"/>
     <path d="M 8 85 A 10 10 0 0 1 22 85" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
@@ -192,49 +617,6 @@ def generate_3d_quantum():
         f.write(svg)
     print(f"Generated {filepath}")
 
-# 3. Generate living-orbital-pulse.svg
-def generate_pulse():
-    width = 1200
-    height = 30
-    lines = []
-    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" preserveAspectRatio="none">')
-    lines.append('<defs>')
-    lines.append('  <linearGradient id="cyanFlow" x1="0" y1="0" x2="1" y2="0">')
-    lines.append('    <stop offset="0%" stop-color="#00D4FF"/>')
-    lines.append('    <stop offset="25%" stop-color="#7B2CBF"/>')
-    lines.append('    <stop offset="50%" stop-color="#00F5D4"/>')
-    lines.append('    <stop offset="75%" stop-color="#FF007F"/>')
-    lines.append('    <stop offset="100%" stop-color="#00D4FF"/>')
-    lines.append('  </linearGradient>')
-    lines.append('  <filter id="glow">')
-    lines.append('    <feGaussianBlur stdDeviation="2.5" result="blur"/>')
-    lines.append('    <feMerge>')
-    lines.append('      <feMergeNode in="blur"/>')
-    lines.append('      <feMergeNode in="blur"/>')
-    lines.append('      <feMergeNode in="SourceGraphic"/>')
-    lines.append('    </feMerge>')
-    lines.append('  </filter>')
-    lines.append('</defs>')
-    lines.append('<style>')
-    lines.append('  @keyframes particle { 0% { transform: translateX(-50px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(1250px); opacity: 0; } }')
-    lines.append('  @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }')
-    lines.append('</style>')
-    mid = height / 2
-    lines.append(f'<line x1="0" y1="{mid}" x2="{width}" y2="{mid}" stroke="url(#cyanFlow)" stroke-width="1.8" filter="url(#glow)" style="animation: pulse 3s ease-in-out infinite;"/>')
-    colors = ['#00D4FF', '#00F5D4', '#7B2CBF', '#FF007F']
-    for i in range(24):
-        delay = i * 0.35
-        dur = 4.0 + (i % 4) * 0.5
-        y = mid + math.sin(i * 0.9) * 3.5
-        c = colors[i % 4]
-        lines.append(f'<circle cx="0" cy="{y:.1f}" r="1.5" fill="{c}" filter="url(#glow)" style="animation: particle {dur:.1f}s linear infinite {delay:.2f}s;"/>')
-    lines.append('</svg>')
-    filepath = os.path.join(output_dir, "living-orbital-pulse.svg")
-    with open(filepath, "w") as f:
-        f.write('\n'.join(lines))
-    print(f"Generated {filepath}")
-
-# 4. Generate orbital-hud.svg
 def generate_hud():
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%">
   <defs>
@@ -313,7 +695,6 @@ def generate_hud():
         f.write(svg)
     print(f"Generated {filepath}")
 
-# 5. Generate matrix-terminal.svg
 def generate_terminal():
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%">
   <rect width="100%" height="100%" fill="#0D1117" rx="8" stroke="#30363D" stroke-width="1"/>
@@ -349,8 +730,11 @@ def generate_terminal():
     print(f"Generated {filepath}")
 
 if __name__ == "__main__":
+    generate_isometric_stack()
+    generate_bloch_radar()
+    generate_skill_matrix()
+    generate_cyber_wave()
     generate_3d_orbital()
     generate_3d_quantum()
-    generate_pulse()
     generate_hud()
     generate_terminal()

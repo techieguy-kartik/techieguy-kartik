@@ -30,7 +30,7 @@
   <img src="./assets/orbital-hud.svg" alt="System HUD Dashboard" width="100%" />
 </div>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## SYSTEM.INIT()
 
@@ -83,15 +83,31 @@ class QuantumSwarmArchitect:
 
 </details>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
-## 🛸 3D ORBITAL & SWARM MESH ARCHITECTURE
+## 🏗️ 3D ISOMETRIC FULL-STACK SYSTEM ARCHITECTURE
+
+<div align="center">
+  <img src="./assets/3d-isometric-system-stack.svg" alt="3D Isometric System Architecture Stack" width="100%" />
+</div>
+
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
+
+## 📡 REAL-TIME TELEMETRY // ORBITAL RADAR &amp; QUANTUM STATE
+
+<div align="center">
+  <img src="./assets/quantum-bloch-radar.svg" alt="Orbital Radar and Quantum Bloch Sphere Telemetry" width="100%" />
+</div>
+
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
+
+## 🛸 3D ORBITAL &amp; SWARM TOPOLOGY
 
 <div align="center">
   <img src="./assets/3d-orbital-constellation.svg" alt="3D Orbital Constellation" width="100%" />
 </div>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## ⚛️ 3D QUANTUM DISCOCAT COMPILER TOPOLOGY
 
@@ -99,7 +115,15 @@ class QuantumSwarmArchitect:
   <img src="./assets/3d-quantum-circuit.svg" alt="3D Quantum Circuit" width="100%" />
 </div>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
+
+## 💎 CORE CAPABILITY &amp; HARDWARE ACCELERATION MATRIX
+
+<div align="center">
+  <img src="./assets/holographic-skill-matrix.svg" alt="Holographic Capability Matrix" width="100%" />
+</div>
+
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## 🌐 3D SYSTEM CONTRIBUTION MATRIX
 
@@ -128,9 +152,9 @@ class QuantumSwarmArchitect:
 
 </details>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
-## 🔬 RESEARCH MATRIX & DOMAINS
+## 🔬 RESEARCH MATRIX &amp; DOMAINS
 
 <table align="center">
 <tr>
@@ -188,9 +212,9 @@ Repository Status: 🔒 Private R&D Repo
 </tr>
 </table>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
-## 📝 PUBLISHED ARTICLES & FEATURED RESEARCH
+## 📝 PUBLISHED ARTICLES &amp; FEATURED RESEARCH
 
 <!-- BLOG-POST-LIST:START -->
 | Publication / Research Area | Focus & Mechanism | Access / Link |
@@ -201,9 +225,9 @@ Repository Status: 🔒 Private R&D Repo
 | **3DGS Real-Time Robotic SLAM** | 3D Gaussian Splatting representation for real-time localization in Nav2-stack robotics. | 🔒 Private R&D Repository |
 <!-- BLOG-POST-LIST:END -->
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
-## 🎯 ENGINEERING & RESEARCH ACCOMPLISHMENTS
+## 🎯 ENGINEERING &amp; RESEARCH ACCOMPLISHMENTS
 
 <div align="center">
   <table>
@@ -215,7 +239,7 @@ Repository Status: 🔒 Private R&D Repo
         <br/>
         <sub>AI Systems Research</sub>
         <br/>
-        <sub>Embedded & Edge Acceleration</sub>
+        <sub>Embedded &amp; Edge Acceleration</sub>
       </td>
       <td align="center" width="33%">
         <img src="https://img.shields.io/badge/QUANTUM_RESEARCH-6929C4?style=for-the-badge&logo=qiskit&logoColor=white" alt="Quantum"/>
@@ -229,7 +253,7 @@ Repository Status: 🔒 Private R&D Repo
       <td align="center" width="33%">
         <img src="https://img.shields.io/badge/SWARM_ROBOTICS-00D4FF?style=for-the-badge&logo=ros&logoColor=white" alt="Robotics"/>
         <br/>
-        <sub><b>3DGS & MARL</b></sub>
+        <sub><b>3DGS &amp; MARL</b></sub>
         <br/>
         <sub>Nav2 Robot Localisation</sub>
         <br/>
@@ -239,7 +263,7 @@ Repository Status: 🔒 Private R&D Repo
   </table>
 </div>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## 🛠️ NEURAL TECHNOLOGY STACK
 
@@ -254,7 +278,7 @@ Repository Status: 🔒 Private R&D Repo
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 </p>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## 🌈 SYSTEM ACTIVITY SPECTRUM
 
@@ -266,7 +290,7 @@ Repository Status: 🔒 Private R&D Repo
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=techieguy-kartik&theme=react-dark&hide_border=true&bg_color=0D1117&color=00D4FF&line=FF6B6B&point=FFD93D&area=true&area_color=9B59B6" alt="System Activity Graph" width="100%" />
 </div>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## 📊 SYSTEM ANALYTICS
 
@@ -290,7 +314,7 @@ Repository Status: 🔒 Private R&D Repo
   </picture>
 </div>
 
-<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" width="75%" />
@@ -303,5 +327,5 @@ Repository Status: 🔒 Private R&D Repo
 </div>
 
 <div align="center">
-  <sub>Designed with Cyberpunk HUD Architecture & Quantum Precision // Kartik Arora @ Samsung R&D</sub>
+  <sub>Designed with Cyberpunk HUD Architecture &amp; Quantum Precision // Kartik Arora @ Samsung R&amp;D</sub>
 </div>
