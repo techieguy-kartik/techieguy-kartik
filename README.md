@@ -85,6 +85,22 @@ class QuantumSwarmArchitect:
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
+## 🛸 3D ORBITAL & SWARM MESH ARCHITECTURE
+
+<div align="center">
+  <img src="./assets/3d-orbital-constellation.svg" alt="3D Orbital Constellation" width="100%" />
+</div>
+
+<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+
+## ⚛️ 3D QUANTUM DISCOCAT COMPILER TOPOLOGY
+
+<div align="center">
+  <img src="./assets/3d-quantum-circuit.svg" alt="3D Quantum Circuit" width="100%" />
+</div>
+
+<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+
 ## 🌐 3D SYSTEM CONTRIBUTION MATRIX
 
 <div align="center">
@@ -92,19 +108,29 @@ class QuantumSwarmArchitect:
 </div>
 
 <div align="center">
-  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Contribution Graph" width="100%" />
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Contribution Graph (Night View)" width="100%" />
 </div>
+
+<details>
+<summary><b>🔄 Toggle Alternative 3D Contribution Views (GitBlock &amp; Seasonal)</b></summary>
+
+<br/>
+
+<div align="center">
+  <h4>3D GitBlock View</h4>
+  <img src="./profile-3d-contrib/profile-gitblock.svg" alt="3D GitBlock View" width="100%" />
+</div>
+
+<div align="center">
+  <h4>3D Animated Green View</h4>
+  <img src="./profile-3d-contrib/profile-green-animate.svg" alt="3D Green Animated View" width="100%" />
+</div>
+
+</details>
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
-## 🔬 RESEARCH MATRIX & DOMAINS
-
-<!-- ═══════ CUSTOM SVG: SWARM NETWORK MESH TOPOLOGY ═══════ -->
-<div align="center">
-  <img src="./assets/swarm-network-mesh.svg" alt="Swarm Network Mesh Topology" width="100%" />
-</div>
-
-<br/>
+## 🔬 RESEARCH MATRIX & HIGH-READABILITY DOMAINS
 
 <table align="center">
 <tr>

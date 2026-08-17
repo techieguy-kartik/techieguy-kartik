@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%">
+  <defs>
+    <linearGradient id="qGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B2CBF"/>
+      <stop offset="50%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+    <filter id="qGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#0B0E14" rx="12" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="30" y="35" font-family="'Courier New', monospace" font-weight="bold" fill="#7B2CBF" font-size="14" letter-spacing="2">3D_QUANTUM_DISCOCAT_COMPILER // GRAMMAR TO NISQ GATES</text>
+  <text x="970" y="35" font-family="monospace" fill="#00D4FF" font-size="12" text-anchor="end">[QISKIT &amp; PENNYLANE ACCELERATED]</text>
+
+  <!-- 3D Perspective Circuit Wires -->
+  <g stroke="url(#qGrad)" stroke-width="2" opacity="0.8">
+    <line x1="80" y1="80" x2="920" y2="80"/>
+    <line x1="80" y1="130" x2="920" y2="130"/>
+    <line x1="80" y1="180" x2="920" y2="180"/>
+  </g>
+
+  <!-- Qubit Labels -->
+  <text x="40" y="84" font-family="monospace" fill="#00D4FF" font-size="13" font-weight="bold">|q0⟩</text>
+  <text x="40" y="134" font-family="monospace" fill="#7B2CBF" font-size="13" font-weight="bold">|q1⟩</text>
+  <text x="40" y="184" font-family="monospace" fill="#00F5D4" font-size="13" font-weight="bold">|q2⟩</text>
+
+  <!-- Hadamard Gates -->
+  <g transform="translate(180, 0)" filter="url(#qGlow)">
+    <rect x="0" y="65" width="30" height="30" fill="#1E293B" stroke="#00D4FF" stroke-width="1.5" rx="4"/>
+    <text x="15" y="85" font-family="sans-serif" fill="#00D4FF" font-size="14" font-weight="bold" text-anchor="middle">H</text>
+
+    <rect x="0" y="115" width="30" height="30" fill="#1E293B" stroke="#7B2CBF" stroke-width="1.5" rx="4"/>
+    <text x="15" y="135" font-family="sans-serif" fill="#7B2CBF" font-size="14" font-weight="bold" text-anchor="middle">H</text>
+  </g>
+
+  <!-- CNOT Entanglement Gate -->
+  <g transform="translate(360, 0)" filter="url(#qGlow)">
+    <line x1="15" y1="80" x2="15" y2="180" stroke="#00F5D4" stroke-width="2"/>
+    <circle cx="15" cy="80" r="5" fill="#00F5D4"/>
+    <circle cx="15" cy="180" r="10" fill="none" stroke="#00F5D4" stroke-width="2"/>
+    <line x1="15" y1="173" x2="15" y2="187" stroke="#00F5D4" stroke-width="2"/>
+    <line x1="8" y1="180" x2="22" y2="180" stroke="#00F5D4" stroke-width="2"/>
+  </g>
+
+  <!-- Parameterized Rotation Gates Rz(θ) -->
+  <g transform="translate(540, 0)" filter="url(#qGlow)">
+    <rect x="0" y="65" width="60" height="30" fill="#1E293B" stroke="#FF007F" stroke-width="1.5" rx="4"/>
+    <text x="30" y="84" font-family="sans-serif" fill="#FF007F" font-size="11" font-weight="bold" text-anchor="middle">Rz(θ1)</text>
+
+    <rect x="0" y="115" width="60" height="30" fill="#1E293B" stroke="#00D4FF" stroke-width="1.5" rx="4"/>
+    <text x="30" y="134" font-family="sans-serif" fill="#00D4FF" font-size="11" font-weight="bold" text-anchor="middle">Ry(θ2)</text>
+
+    <rect x="0" y="165" width="60" height="30" fill="#1E293B" stroke="#00F5D4" stroke-width="1.5" rx="4"/>
+    <text x="30" y="184" font-family="sans-serif" fill="#00F5D4" font-size="11" font-weight="bold" text-anchor="middle">Rz(θ3)</text>
+  </g>
+
+  <!-- Measurement Meters -->
+  <g transform="translate(760, 0)">
+    <rect x="0" y="65" width="30" height="30" fill="#0D1117" stroke="#94A3B8" stroke-width="1.5" rx="4"/>
+    <path d="M 8 85 A 10 10 0 0 1 22 85" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+    <line x1="15" y1="85" x2="22" y2="73" stroke="#00F5D4" stroke-width="1.5"/>
+
+    <rect x="0" y="115" width="30" height="30" fill="#0D1117" stroke="#94A3B8" stroke-width="1.5" rx="4"/>
+    <path d="M 8 135 A 10 10 0 0 1 22 135" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+    <line x1="15" y1="135" x2="22" y2="123" stroke="#00F5D4" stroke-width="1.5"/>
+
+    <rect x="0" y="165" width="30" height="30" fill="#0D1117" stroke="#94A3B8" stroke-width="1.5" rx="4"/>
+    <path d="M 8 185 A 10 10 0 0 1 22 185" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+    <line x1="15" y1="185" x2="22" y2="173" stroke="#00F5D4" stroke-width="1.5"/>
+  </g>
+</svg>
