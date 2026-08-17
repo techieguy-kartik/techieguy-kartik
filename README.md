@@ -85,15 +85,80 @@ class QuantumSwarmArchitect:
 
 <img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
-## 🏗️ 3D ISOMETRIC FULL-STACK SYSTEM ARCHITECTURE
+## 🏗️ 3D DISTRIBUTED SYSTEM ARCHITECTURE
 
 <div align="center">
-  <img src="./assets/3d-isometric-system-stack.svg" alt="3D Isometric System Architecture Stack" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,20,6&height=100&section=header&text=3D%20DISTRIBUTED%20PIPELINE&fontSize=24&fontColor=fff&animation=blinking" width="100%"/>
 </div>
+
+<div align="center">
+  <img src="./assets/3d-isometric-system-stack.svg" alt="3D Distributed System Architecture Pipeline" width="100%" />
+</div>
+
+<br/>
+
+<table align="center">
+<tr>
+<td width="50%">
+
+### ⚡ SILICON &amp; CUDA KERNELS
+**`Hardware-Software Co-Design`**
+```yaml
+Focus: High-Throughput GPU Kernel Engineering
+Mechanisms:
+  - Custom Triton kernel authoring & hierarchy tuning
+  - FlashAttention kernel integration & optimization
+  - GPU memory profiling via NVIDIA Nsight
+  - Sub-millisecond latency for real-time models
+```
+
+### 🤖 SWARM INTELLIGENCE &amp; 3DGS
+**`Embodied Spatial AI`**
+```yaml
+Focus: Decentralized Multi-Agent Coordination
+Mechanisms:
+  - Attention-based CTDE MARL (Quadrotors + UGVs)
+  - 3D Gaussian Splatting (3DGS) environment updates
+  - ROS2 Nav2 autonomous robot localization
+  - Dynamic inter-agent communication protocols
+```
+
+</td>
+<td width="50%">
+
+### ⚛️ QUANTUM NLP &amp; DISCOCAT
+**`NISQ Gate Compilation`**
+```yaml
+Focus: Compositional Quantum Intelligence
+Mechanisms:
+  - DisCoCat grammar tree ➔ parameterized circuit mapping
+  - Lambeq framework compilation to NISQ architectures
+  - Variational sentence classification benchmarking
+  - Qiskit & PennyLane simulation backends
+```
+
+### 🛰️ SPACE-GRADE ORBITAL AI
+**`LEO Constellation Federated Learning`**
+```yaml
+Focus: Autonomous Orbital Edge Compute
+Mechanisms:
+  - Federated continual learning on LEO satellites
+  - Distribution shift adaptation via delta-weights
+  - Zero ground-station latency dependence
+  - Space-rated low-power model compression
+```
+
+</td>
+</tr>
+</table>
 
 <img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
 ## 📡 REAL-TIME TELEMETRY // ORBITAL RADAR &amp; QUANTUM STATE
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=6,11,20&height=110&section=header&text=TELEMETRY%20%26%20QUANTUM%20RADAR&fontSize=22&fontColor=fff&animation=twinkling" width="100%"/>
+</div>
 
 <div align="center">
   <img src="./assets/quantum-bloch-radar.svg" alt="Orbital Radar and Quantum Bloch Sphere Telemetry" width="100%" />
@@ -151,66 +216,6 @@ class QuantumSwarmArchitect:
 </div>
 
 </details>
-
-<img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
-
-## 🔬 RESEARCH MATRIX &amp; DOMAINS
-
-<table align="center">
-<tr>
-<td width="50%">
-
-### 🛰️ SPACE-GRADE EDGE AI
-**`LEO Constellation Federated Learning`**
-```yaml
-Domain: Orbital Intelligence & Edge Computing
-Mechanism:
-  - Federated continual learning on LEO satellites
-  - Distribution shift adaptation via inter-satellite deltas
-  - Zero ground-station latency dependence
-  - Space-rated low-power model compression
-Repository Status: 🔒 Private R&D Repo
-```
-
-### 🤖 SWARM INTELLIGENCE & MARL
-**`Multi-Agent Drone Coordination`**
-```yaml
-Domain: Autonomous Multi-Agent Systems
-Mechanism:
-  - Communication-constrained MARL (Quadrotors + UGVs)
-  - Attention-based CTDE architecture under partial observability
-  - Dynamic mesh routing & coordinate protocols
-Repository Status: 🔒 Private Research Repo
-```
-
-</td>
-<td width="50%">
-
-### ⚛️ QUANTUM NLP & COMPUTING
-**`DisCoCat to NISQ Circuits`**
-```yaml
-Domain: Compositional Quantum Intelligence
-Mechanism:
-  - Lambeq grammar-to-circuit mapping
-  - Variational sentence classification on NISQ hardware
-  - Qiskit & PennyLane simulator benchmarking
-Repository Status: 🔒 Private Research Repo
-```
-
-### ⚡ GPU KERNEL OPTIMIZATION
-**`CUDA & Triton High Performance`**
-```yaml
-Domain: Hardware Acceleration & AI Systems
-Mechanism:
-  - Custom Triton kernel authoring & Flash Attention
-  - Memory profiling & Nsight hierarchy tuning
-  - Real-time 3D Gaussian Splatting (3DGS) for robotics
-Repository Status: 🔒 Private R&D Repo
-```
-
-</td>
-</tr>
-</table>
 
 <img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
 
