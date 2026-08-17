@@ -130,7 +130,7 @@ class QuantumSwarmArchitect:
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
-## 🔬 RESEARCH MATRIX & HIGH-READABILITY DOMAINS
+## 🔬 RESEARCH MATRIX & DOMAINS
 
 <table align="center">
 <tr>
@@ -145,6 +145,7 @@ Mechanism:
   - Distribution shift adaptation via inter-satellite deltas
   - Zero ground-station latency dependence
   - Space-rated low-power model compression
+Repository Status: 🔒 Private R&D Repo
 ```
 
 ### 🤖 SWARM INTELLIGENCE & MARL
@@ -155,6 +156,7 @@ Mechanism:
   - Communication-constrained MARL (Quadrotors + UGVs)
   - Attention-based CTDE architecture under partial observability
   - Dynamic mesh routing & coordinate protocols
+Repository Status: 🔒 Private Research Repo
 ```
 
 </td>
@@ -168,6 +170,7 @@ Mechanism:
   - Lambeq grammar-to-circuit mapping
   - Variational sentence classification on NISQ hardware
   - Qiskit & PennyLane simulator benchmarking
+Repository Status: 🔒 Private Research Repo
 ```
 
 ### ⚡ GPU KERNEL OPTIMIZATION
@@ -178,6 +181,7 @@ Mechanism:
   - Custom Triton kernel authoring & Flash Attention
   - Memory profiling & Nsight hierarchy tuning
   - Real-time 3D Gaussian Splatting (3DGS) for robotics
+Repository Status: 🔒 Private R&D Repo
 ```
 
 </td>
@@ -186,15 +190,15 @@ Mechanism:
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
-## 📝 FEATURED RESEARCH & AUTOMATED BLOG POSTS
+## 📝 PUBLISHED ARTICLES & FEATURED RESEARCH
 
 <!-- BLOG-POST-LIST:START -->
-| Publication / Article | Description | Direct Link |
+| Publication / Research Area | Focus & Mechanism | Access / Link |
 | :--- | :--- | :---: |
-| **Transformer Architecture Deep Dive** | Comprehensive breakdown of self-attention mechanisms, FlashAttention, and LLM scaling laws. | [Read Article](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa) |
-| **DisCoCat QNLP Compiler** | Compiling natural language grammar structures directly into NISQ quantum circuits using Lambeq. | [Repository](https://github.com/techieguy-kartik) |
-| **Orbital Federated Satellite AI** | Simulated federated continual learning on low Earth orbit constellations via delta-weights. | [Repository](https://github.com/techieguy-kartik) |
-| **3DGS Real-Time Robotic SLAM** | 3D Gaussian Splatting representation for real-time localization in Nav2-stack robotics. | [Repository](https://github.com/techieguy-kartik) |
+| **Transformer Architecture Deep Dive** | Comprehensive breakdown of self-attention mechanisms, FlashAttention, and LLM scaling laws. | [📖 Read Article on Medium](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa) |
+| **DisCoCat QNLP Compiler** | Compiling natural language grammar structures directly into NISQ quantum circuits using Lambeq. | 🔒 Private Research Repository |
+| **Orbital Federated Satellite AI** | Simulated federated continual learning on low Earth orbit constellations via delta-weights. | 🔒 Private Research Repository |
+| **3DGS Real-Time Robotic SLAM** | 3D Gaussian Splatting representation for real-time localization in Nav2-stack robotics. | 🔒 Private R&D Repository |
 <!-- BLOG-POST-LIST:END -->
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
