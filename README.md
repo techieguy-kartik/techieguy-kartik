@@ -85,6 +85,18 @@ class QuantumSwarmArchitect:
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
+## 🌐 3D SYSTEM CONTRIBUTION MATRIX
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=6,11,20&height=130&section=header&text=ISOMETRIC%203D%20CONTRIBUTION%20TOPOLOGY&fontSize=24&fontColor=fff&animation=blinking" width="100%"/>
+</div>
+
+<div align="center">
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Contribution Graph" width="100%" />
+</div>
+
+<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+
 ## 🔬 RESEARCH MATRIX & DOMAINS
 
 <!-- ═══════ CUSTOM SVG: SWARM NETWORK MESH TOPOLOGY ═══════ -->
@@ -151,13 +163,55 @@ Mechanism:
 ## 📝 FEATURED RESEARCH & AUTOMATED BLOG POSTS
 
 <!-- BLOG-POST-LIST:START -->
-- [Transformer Architecture deep dive](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa?source=rss-bbd8e5185bec------2)
-- [AWS VPC &lpar;Virtual Private Cloud&rpar;](https://medium.com/@arorakartik1589/aws-vpc-virtual-private-cloud-32872f0f58d8?source=rss-bbd8e5185bec------2)
+| Publication / Article | Description | Direct Link |
+| :--- | :--- | :---: |
+| **Transformer Architecture Deep Dive** | Comprehensive breakdown of self-attention mechanisms, FlashAttention, and LLM scaling laws. | [Read Article](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa) |
+| **DisCoCat QNLP Compiler** | Compiling natural language grammar structures directly into NISQ quantum circuits using Lambeq. | [Repository](https://github.com/techieguy-kartik) |
+| **Orbital Federated Satellite AI** | Simulated federated continual learning on low Earth orbit constellations via delta-weights. | [Repository](https://github.com/techieguy-kartik) |
+| **3DGS Real-Time Robotic SLAM** | 3D Gaussian Splatting representation for real-time localization in Nav2-stack robotics. | [Repository](https://github.com/techieguy-kartik) |
 <!-- BLOG-POST-LIST:END -->
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
-## 🛠️ NEURAL TECH MATRIX
+## 🎯 ENGINEERING & RESEARCH ACCOMPLISHMENTS
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="33%">
+        <img src="https://img.shields.io/badge/SAMSUNG_R%26D-034EA2?style=for-the-badge&logo=samsung&logoColor=white" alt="Samsung"/>
+        <br/>
+        <sub><b>Software Engineer</b></sub>
+        <br/>
+        <sub>AI Systems Research</sub>
+        <br/>
+        <sub>Embedded & Edge Acceleration</sub>
+      </td>
+      <td align="center" width="33%">
+        <img src="https://img.shields.io/badge/QUANTUM_RESEARCH-6929C4?style=for-the-badge&logo=qiskit&logoColor=white" alt="Quantum"/>
+        <br/>
+        <sub><b>DisCoCat QNLP</b></sub>
+        <br/>
+        <sub>NISQ Circuit Compilers</sub>
+        <br/>
+        <sub>Variational Classifiers</sub>
+      </td>
+      <td align="center" width="33%">
+        <img src="https://img.shields.io/badge/SWARM_ROBOTICS-00D4FF?style=for-the-badge&logo=ros&logoColor=white" alt="Robotics"/>
+        <br/>
+        <sub><b>3DGS & MARL</b></sub>
+        <br/>
+        <sub>Nav2 Robot Localisation</sub>
+        <br/>
+        <sub>Multi-Agent Drone Swarms</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+
+## 🛠️ NEURAL TECHNOLOGY STACK
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -172,7 +226,19 @@ Mechanism:
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
 
-## 📊 TELEMETRY & SYSTEM ANALYTICS
+## 🌈 SYSTEM ACTIVITY SPECTRUM
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=6,11,20&height=120&section=header&text=DIGITAL%20TELEMETRY%20FLOW&fontSize=22&fontColor=fff&animation=twinkling" width="100%"/>
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=techieguy-kartik&theme=react-dark&hide_border=true&bg_color=0D1117&color=00D4FF&line=FF6B6B&point=FFD93D&area=true&area_color=9B59B6" alt="System Activity Graph" width="100%" />
+</div>
+
+<img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+
+## 📊 SYSTEM ANALYTICS
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=techieguy-kartik&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" />
@@ -186,11 +252,25 @@ Mechanism:
 <br/>
 
 <div align="center">
-  <h3>⚡ Contribution Activity Matrix ⚡</h3>
-  <img src="https://raw.githubusercontent.com/techieguy-kartik/techieguy-kartik/output/github-snake-dark.svg" alt="Contribution Snake" width="100%" />
+  <h3>⚡ Contribution Activity Grid ⚡</h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/techieguy-kartik/techieguy-kartik/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/techieguy-kartik/techieguy-kartik/output/github-snake.svg">
+    <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/techieguy-kartik/techieguy-kartik/output/github-snake-dark.svg" width="100%">
+  </picture>
 </div>
 
 <img src="./assets/living-orbital-pulse.svg" alt="orbital pulse divider" width="100%">
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" width="75%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=80&section=footer&animation=twinkling" width="100%"/>
+</div>
 
 <div align="center">
   <sub>Designed with Cyberpunk HUD Architecture & Quantum Precision // Kartik Arora @ Samsung R&D</sub>
