@@ -1,11 +1,11 @@
 # KΛRTIK ΛRORΛ
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,5,11,20&height=300&section=header&text=AI%20SYSTEMS%20RESEARCHER&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=55&desc=Software%20Engineer%20%40%20Samsung%20R%26D&descAlignY=75&descAlign=62" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,5,11,20&height=300&section=header&text=AI%20SYSTEMS%20RESEARCHER&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=55&desc=Software%20Engineer%20%40%20Samsung%20R%26amp%3BD&descAlignY=75&descAlign=62" width="100%"/>
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=32&duration=2500&pause=1000&color=00D4FF&center=true&vCenter=true&random=false&width=850&lines=Software+Engineer+%40+Samsung+R%26D;Autonomous+AI+%26+Swarm+Intelligence;LEO+Satellite+Federated+Inference;Embodied+Robotics+%26+3D+Gaussian+Splatting;Quantum+Computing+%26+Quantum+NLP;CUDA+%26+Triton+Kernel+Architect" alt="Kartik Typing Animation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=32&duration=2500&pause=1000&color=00D4FF&center=true&vCenter=true&random=false&width=850&lines=Software+Engineer+%40+Samsung+R%26amp%3BD;Autonomous+AI+%26+Swarm+Intelligence;LEO+Satellite+Federated+Inference;Embodied+Robotics+%26+3D+Gaussian+Splatting;Quantum+Computing+%26+Quantum+NLP;CUDA+%26+Triton+Kernel+Architect" alt="Kartik Typing Animation" />
 </div>
 
 <div align="center">
