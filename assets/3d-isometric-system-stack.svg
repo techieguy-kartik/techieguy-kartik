@@ -1,22 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%">
   <defs>
-    <linearGradient id="slabGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#7B2CBF" stop-opacity="0.1"/>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0.95"/>
     </linearGradient>
-    <linearGradient id="slabGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00F5D4" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#00599C" stop-opacity="0.1"/>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#00599C"/>
     </linearGradient>
-    <linearGradient id="slabGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF007F" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#7B2CBF" stop-opacity="0.1"/>
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
-    <linearGradient id="slabGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#76B900" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0.1"/>
+    <linearGradient id="neonEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
     </linearGradient>
-    <filter id="neonGlow">
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -26,119 +31,137 @@
   </defs>
 
   <style>
-    .bg-canvas { fill: #0B0E14; rx: 12px; stroke: #1E293B; stroke-width: 1.5; }
-    .header-title { font-family: 'Courier New', monospace; font-weight: bold; fill: #00D4FF; font-size: 15px; letter-spacing: 2px; }
-    .header-status { font-family: monospace; fill: #00F5D4; font-size: 12px; }
-    .tier-title { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 13px; }
-    .tier-desc { font-family: monospace; font-size: 11px; fill: #94A3B8; }
-    .laser-bus { stroke-dasharray: 4,4; animation: laserFlow 2s linear infinite; }
-    @keyframes laserFlow { 0% { stroke-dashoffset: 16; } 100% { stroke-dashoffset: 0; } }
-    @keyframes particleDrop { 0% { cy: 110; opacity: 0; } 50% { opacity: 1; } 100% { cy: 410; opacity: 0; } }
+    .bg-main { fill: #0B0E14; rx: 12px; stroke: #21262D; stroke-width: 1.5; }
+    .header-tag { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; font-weight: 700; fill: #00D4FF; letter-spacing: 1.5px; }
+    .header-sub { font-family: monospace; font-size: 11px; fill: #8B949E; }
+    .card-box { rx: 10px; stroke-width: 1.5; fill: url(#cardGrad1); transition: all 0.3s ease; }
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; }
+    .item-text { font-family: monospace; font-size: 11px; fill: #C9D1D9; }
+    .item-dim { font-family: monospace; font-size: 10px; fill: #8B949E; }
+    .bus-line { stroke-dasharray: 4,4; animation: busFlow 2s linear infinite; }
+    @keyframes busFlow { 0% { stroke-dashoffset: 16; } 100% { stroke-dashoffset: 0; } }
   </style>
 
-  <rect width="100%" height="100%" class="bg-canvas" />
+  <rect width="100%" height="100%" class="bg-main"/>
 
-  <!-- Header -->
-  <text x="30" y="38" class="header-title">3D_ISOMETRIC_SYSTEM_ARCHITECTURE // FULL-STACK TELEMETRY</text>
-  <text x="970" y="38" class="header-status" text-anchor="end">[4-TIER RECURSIVE ARCHITECTURE]</text>
-  <line x1="30" y1="52" x2="970" y2="52" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="30" y="36" class="header-tag">SYSTEM_ARCHITECTURE // DISTRIBUTED AUTONOMOUS STACK</text>
+  <text x="970" y="36" class="header-sub" text-anchor="end">[SAMSUNG R&amp;D • END-TO-END PIPELINE]</text>
+  <line x1="30" y1="50" x2="970" y2="50" stroke="#21262D" stroke-width="1.5"/>
 
-  <!-- Vertical Laser Interconnect Buses -->
-  <line x1="500" y1="100" x2="500" y2="430" stroke="#00D4FF" stroke-width="1.5" class="laser-bus" opacity="0.6"/>
-  <line x1="320" y1="140" x2="320" y2="430" stroke="#7B2CBF" stroke-width="1.2" class="laser-bus" opacity="0.4"/>
-  <line x1="680" y1="140" x2="680" y2="430" stroke="#00F5D4" stroke-width="1.2" class="laser-bus" opacity="0.4"/>
+  <!-- Interconnect Bus Lines -->
+  <line x1="240" y1="185" x2="270" y2="185" stroke="#00D4FF" stroke-width="2" class="bus-line"/>
+  <line x1="480" y1="185" x2="510" y2="185" stroke="#A855F7" stroke-width="2" class="bus-line"/>
+  <line x1="720" y1="185" x2="750" y2="185" stroke="#10B981" stroke-width="2" class="bus-line"/>
 
-  <!-- Floating Data Particles -->
-  <circle cx="500" cy="110" r="2.5" fill="#00F5D4" filter="url(#neonGlow)">
-    <animate attributeName="cy" values="100;420" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="320" cy="140" r="2" fill="#7B2CBF" filter="url(#neonGlow)">
-    <animate attributeName="cy" values="140;430" dur="3s" begin="0.8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="3s" begin="0.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="680" cy="140" r="2" fill="#00D4FF" filter="url(#neonGlow)">
-    <animate attributeName="cy" values="140;430" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
-  </circle>
+  <!-- ================= CARD 1: HARDWARE SILICON & CUDA ================= -->
+  <g transform="translate(30, 70)">
+    <rect width="210" height="260" class="card-box" stroke="#00D4FF" filter="url(#softGlow)"/>
+    
+    <g transform="translate(105, 45)">
+      <polygon points="0,-18 36,0 0,18 -36,0" fill="url(#neonCyan)" opacity="0.8"/>
+      <polygon points="-36,0 0,18 0,26 -36,8" fill="#00599C" opacity="0.9"/>
+      <polygon points="36,0 0,18 0,26 36,8" fill="#00D4FF" opacity="0.6"/>
+      <circle cx="0" cy="0" r="8" fill="#0D1117" stroke="#00D4FF" stroke-width="1.5"/>
+      <text x="0" y="3.5" font-size="8" fill="#00D4FF" text-anchor="middle" font-family="monospace">⚡</text>
+    </g>
 
-  <!-- ================= TIER 4: ORBITAL EDGE & SATELLITE SWARM (Top) ================= -->
-  <g transform="translate(500, 105)">
-    <!-- Isometric Polygon Slab -->
-    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad1)" stroke="#00D4FF" stroke-width="1.8" filter="url(#neonGlow)"/>
-    <polygon points="-260,20 0,68 0,80 -260,32" fill="#00D4FF" fill-opacity="0.2" stroke="#00D4FF" stroke-width="1"/>
-    <polygon points="260,20 0,68 0,80 260,32" fill="#7B2CBF" fill-opacity="0.2" stroke="#7B2CBF" stroke-width="1"/>
+    <text x="105" y="95" class="card-title" fill="#00D4FF" text-anchor="middle">Silicon &amp; CUDA</text>
+    
+    <rect x="55" y="105" width="100" height="18" fill="#0D1117" stroke="#00D4FF" rx="4"/>
+    <text x="105" y="117" font-family="monospace" font-size="9" fill="#00D4FF" text-anchor="middle">GPU ACCELERATION</text>
 
-    <!-- Tier Icon & Nodes -->
-    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#00D4FF" stroke-width="1.5"/>
-    <text x="0" y="24" font-size="12" text-anchor="middle">🛰️</text>
+    <line x1="20" y1="135" x2="190" y2="135" stroke="#21262D" stroke-width="1"/>
 
-    <!-- Content Labels (Right & Left) -->
-    <text x="290" y="22" class="tier-title" fill="#00D4FF">TIER 4: Space-Grade Orbital AI</text>
-    <text x="290" y="38" class="tier-desc">LEO Constellations • Federated Continual Learning</text>
-    <text x="290" y="52" class="tier-desc">Zero-Latency Delta Sync • Space-Hardened Inference</text>
+    <text x="20" y="160" class="item-text">• Triton Kernel Authoring</text>
+    <text x="20" y="176" class="item-dim">  Custom memory hierarchy</text>
 
-    <text x="-290" y="22" class="tier-title" fill="#00D4FF" text-anchor="end">Distributed Telemetry</text>
-    <text x="-290" y="38" class="tier-desc" text-anchor="end">Inter-Satellite Laser Mesh</text>
+    <text x="20" y="202" class="item-text">• FlashAttention Engine</text>
+    <text x="20" y="218" class="item-dim">  Nsight profiling &amp; PPA</text>
+
+    <text x="20" y="244" class="item-text">• PyTorch &amp; C++20</text>
   </g>
 
-  <!-- ================= TIER 3: SWARM MARL & EMBODIED ROBOTICS ================= -->
-  <g transform="translate(500, 205)">
-    <!-- Isometric Polygon Slab -->
-    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad2)" stroke="#00F5D4" stroke-width="1.8" filter="url(#neonGlow)"/>
-    <polygon points="-260,20 0,68 0,80 -260,32" fill="#00F5D4" fill-opacity="0.2" stroke="#00F5D4" stroke-width="1"/>
-    <polygon points="260,20 0,68 0,80 260,32" fill="#00599C" fill-opacity="0.2" stroke="#00599C" stroke-width="1"/>
+  <!-- ================= CARD 2: QUANTUM COMPILER (DisCoCat) ================= -->
+  <g transform="translate(270, 70)">
+    <rect width="210" height="260" class="card-box" stroke="#A855F7" filter="url(#softGlow)"/>
+    
+    <g transform="translate(105, 45)">
+      <polygon points="0,-18 36,0 0,18 -36,0" fill="url(#neonPurple)" opacity="0.8"/>
+      <polygon points="-36,0 0,18 0,26 -36,8" fill="#6366F1" opacity="0.9"/>
+      <polygon points="36,0 0,18 0,26 36,8" fill="#A855F7" opacity="0.6"/>
+      <circle cx="0" cy="0" r="8" fill="#0D1117" stroke="#A855F7" stroke-width="1.5"/>
+      <text x="0" y="3.5" font-size="8" fill="#A855F7" text-anchor="middle" font-family="monospace">⚛️</text>
+    </g>
 
-    <!-- Tier Icon & Nodes -->
-    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#00F5D4" stroke-width="1.5"/>
-    <text x="0" y="24" font-size="12" text-anchor="middle">🤖</text>
+    <text x="105" y="95" class="card-title" fill="#A855F7" text-anchor="middle">Quantum NLP</text>
+    
+    <rect x="55" y="105" width="100" height="18" fill="#0D1117" stroke="#A855F7" rx="4"/>
+    <text x="105" y="117" font-family="monospace" font-size="9" fill="#A855F7" text-anchor="middle">DISCOCAT COMPILER</text>
 
-    <!-- Content Labels -->
-    <text x="290" y="22" class="tier-title" fill="#00F5D4">TIER 3: Swarm MARL &amp; 3DGS Spatial Vision</text>
-    <text x="290" y="38" class="tier-desc">Heterogeneous Drones + UGVs • Attention CTDE</text>
-    <text x="290" y="52" class="tier-desc">3D Gaussian Splatting • ROS2 Nav2 Localization</text>
+    <line x1="20" y1="135" x2="190" y2="135" stroke="#21262D" stroke-width="1"/>
 
-    <text x="-290" y="22" class="tier-title" fill="#00F5D4" text-anchor="end">Decentralized Mesh</text>
-    <text x="-290" y="38" class="tier-desc" text-anchor="end">Dynamic Agent Coordination</text>
+    <text x="20" y="160" class="item-text">• Grammar ➔ NISQ Gates</text>
+    <text x="20" y="176" class="item-dim">  Lambeq compositional AI</text>
+
+    <text x="20" y="202" class="item-text">• Variational Classifiers</text>
+    <text x="20" y="218" class="item-dim">  Parameterized circuits</text>
+
+    <text x="20" y="244" class="item-text">• Qiskit &amp; PennyLane</text>
   </g>
 
-  <!-- ================= TIER 2: QUANTUM COMPILER & DISCOCAT ================= -->
-  <g transform="translate(500, 305)">
-    <!-- Isometric Polygon Slab -->
-    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad3)" stroke="#FF007F" stroke-width="1.8" filter="url(#neonGlow)"/>
-    <polygon points="-260,20 0,68 0,80 -260,32" fill="#FF007F" fill-opacity="0.2" stroke="#FF007F" stroke-width="1"/>
-    <polygon points="260,20 0,68 0,80 260,32" fill="#7B2CBF" fill-opacity="0.2" stroke="#7B2CBF" stroke-width="1"/>
+  <!-- ================= CARD 3: SWARM MARL & 3DGS ROBOTICS ================= -->
+  <g transform="translate(510, 70)">
+    <rect width="210" height="260" class="card-box" stroke="#10B981" filter="url(#softGlow)"/>
+    
+    <g transform="translate(105, 45)">
+      <polygon points="0,-18 36,0 0,18 -36,0" fill="url(#neonEmerald)" opacity="0.8"/>
+      <polygon points="-36,0 0,18 0,26 -36,8" fill="#059669" opacity="0.9"/>
+      <polygon points="36,0 0,18 0,26 36,8" fill="#10B981" opacity="0.6"/>
+      <circle cx="0" cy="0" r="8" fill="#0D1117" stroke="#10B981" stroke-width="1.5"/>
+      <text x="0" y="3.5" font-size="8" fill="#10B981" text-anchor="middle" font-family="monospace">🤖</text>
+    </g>
 
-    <!-- Tier Icon & Nodes -->
-    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#FF007F" stroke-width="1.5"/>
-    <text x="0" y="24" font-size="12" text-anchor="middle">⚛️</text>
+    <text x="105" y="95" class="card-title" fill="#10B981" text-anchor="middle">Swarm Robotics</text>
+    
+    <rect x="55" y="105" width="100" height="18" fill="#0D1117" stroke="#10B981" rx="4"/>
+    <text x="105" y="117" font-family="monospace" font-size="9" fill="#10B981" text-anchor="middle">EMBODIED SPATIAL</text>
 
-    <!-- Content Labels -->
-    <text x="290" y="22" class="tier-title" fill="#FF007F">TIER 2: DisCoCat Quantum NLP Compiler</text>
-    <text x="290" y="38" class="tier-desc">Grammar-to-Circuit Mapping • NISQ Execution</text>
-    <text x="290" y="52" class="tier-desc">Parameterized Variational Circuits • PennyLane &amp; Qiskit</text>
+    <line x1="20" y1="135" x2="190" y2="135" stroke="#21262D" stroke-width="1"/>
 
-    <text x="-290" y="22" class="tier-title" fill="#FF007F" text-anchor="end">Compositional AI</text>
-    <text x="-290" y="38" class="tier-desc" text-anchor="end">Entangled State Encoding</text>
+    <text x="20" y="160" class="item-text">• Attention CTDE Swarms</text>
+    <text x="20" y="176" class="item-dim">  Quadrotors + UGVs MARL</text>
+
+    <text x="20" y="202" class="item-text">• 3D Gaussian Splatting</text>
+    <text x="20" y="218" class="item-dim">  Real-time Nav2 SLAM</text>
+
+    <text x="20" y="244" class="item-text">• ROS2 &amp; Mesh Routing</text>
   </g>
 
-  <!-- ================= TIER 1: HARDWARE SILICON & CUDA KERNELS (Base) ================= -->
-  <g transform="translate(500, 405)">
-    <!-- Isometric Polygon Slab -->
-    <polygon points="0,-28 260,20 0,68 -260,20" fill="url(#slabGrad4)" stroke="#76B900" stroke-width="1.8" filter="url(#neonGlow)"/>
-    <polygon points="-260,20 0,68 0,80 -260,32" fill="#76B900" fill-opacity="0.2" stroke="#76B900" stroke-width="1"/>
-    <polygon points="260,20 0,68 0,80 260,32" fill="#00D4FF" fill-opacity="0.2" stroke="#00D4FF" stroke-width="1"/>
+  <!-- ================= CARD 4: SPACE-GRADE ORBITAL AI ================= -->
+  <g transform="translate(750, 70)">
+    <rect width="210" height="260" class="card-box" stroke="#EC4899" filter="url(#softGlow)"/>
+    
+    <g transform="translate(105, 45)">
+      <polygon points="0,-18 36,0 0,18 -36,0" fill="url(#neonPink)" opacity="0.8"/>
+      <polygon points="-36,0 0,18 0,26 -36,8" fill="#8B5CF6" opacity="0.9"/>
+      <polygon points="36,0 0,18 0,26 36,8" fill="#EC4899" opacity="0.6"/>
+      <circle cx="0" cy="0" r="8" fill="#0D1117" stroke="#EC4899" stroke-width="1.5"/>
+      <text x="0" y="3.5" font-size="8" fill="#EC4899" text-anchor="middle" font-family="monospace">🛰️</text>
+    </g>
 
-    <!-- Tier Icon & Nodes -->
-    <circle cx="0" cy="20" r="14" fill="#0B0E14" stroke="#76B900" stroke-width="1.5"/>
-    <text x="0" y="24" font-size="12" text-anchor="middle">⚡</text>
+    <text x="105" y="95" class="card-title" fill="#EC4899" text-anchor="middle">Orbital Edge AI</text>
+    
+    <rect x="55" y="105" width="100" height="18" fill="#0D1117" stroke="#EC4899" rx="4"/>
+    <text x="105" y="117" font-family="monospace" font-size="9" fill="#EC4899" text-anchor="middle">LEO FEDERATED</text>
 
-    <!-- Content Labels -->
-    <text x="290" y="22" class="tier-title" fill="#76B900">TIER 1: CUDA &amp; Triton Kernel Acceleration</text>
-    <text x="290" y="38" class="tier-desc">FlashAttention • Custom Memory Hierarchy Profiling</text>
-    <text x="290" y="52" class="tier-desc">NVIDIA Nsight Tuning • High-Throughput Tensor Cores</text>
+    <line x1="20" y1="135" x2="190" y2="135" stroke="#21262D" stroke-width="1"/>
 
-    <text x="-290" y="22" class="tier-title" fill="#76B900" text-anchor="end">Silicon Substrate</text>
-    <text x="-290" y="38" class="tier-desc" text-anchor="end">Samsung R&amp;D Base</text>
+    <text x="20" y="160" class="item-text">• LEO Constellations</text>
+    <text x="20" y="176" class="item-dim">  Continual online learning</text>
+
+    <text x="20" y="202" class="item-text">• Delta-Weight Transfers</text>
+    <text x="20" y="218" class="item-dim">  Zero-latency sync</text>
+
+    <text x="20" y="244" class="item-text">• Space-Grade Inference</text>
   </g>
 </svg>
