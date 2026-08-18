@@ -222,12 +222,8 @@ Mechanisms:
 ## 📝 PUBLISHED ARTICLES &amp; FEATURED RESEARCH
 
 <!-- BLOG-POST-LIST:START -->
-| Publication / Research Area | Focus & Mechanism | Access / Link |
-| :--- | :--- | :---: |
-| **Transformer Architecture Deep Dive** | Comprehensive breakdown of self-attention mechanisms, FlashAttention, and LLM scaling laws. | [📖 Read Article on Medium](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa) |
-| **DisCoCat QNLP Compiler** | Compiling natural language grammar structures directly into NISQ quantum circuits using Lambeq. | 🔒 Private Research Repository |
-| **Orbital Federated Satellite AI** | Simulated federated continual learning on low Earth orbit constellations via delta-weights. | 🔒 Private Research Repository |
-| **3DGS Real-Time Robotic SLAM** | 3D Gaussian Splatting representation for real-time localization in Nav2-stack robotics. | 🔒 Private R&D Repository |
+- [Transformer Architecture deep dive](https://medium.com/@arorakartik1589/transformer-architecture-deep-dive-b5514af147aa?source=rss-bbd8e5185bec------2)
+- [AWS VPC &lpar;Virtual Private Cloud&rpar;](https://medium.com/@arorakartik1589/aws-vpc-virtual-private-cloud-32872f0f58d8?source=rss-bbd8e5185bec------2)
 <!-- BLOG-POST-LIST:END -->
 
 <img src="./assets/cyber-living-wave.svg" alt="cyber wave divider" width="100%">
